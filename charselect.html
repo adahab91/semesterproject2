@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Addmore metastuff-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/char.css">
+    <title>Game of Boards!</title>
+</head>
+<body onload="resetLocalStorage()">
+
+<audio id="myAudio" autoplay loop>
+  <source src="music/13. The Viper of Dorne.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<nav class="[ navbar navbar-light fixed-top ][ navigation ]">
+    <a class="[ navbar-brand ]" href="#"><img class="[ logo--small logo--navigation ]" src="images/logo-white.png"> </a>
+    <div class="[ col-2 text-right ][ navigation__button ]">
+        <button class="[ navbar-toggler ][ btn__nav ]" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="[ fas fa-cog ][ navigation__toggler-icon ]"></i>
+        </button>
+    </div>
+
+    <div class="[ col-2 collapse navbar-collapse ][ navigation__content ]" id="navbarSupportedContent">
+        <ul class="[ navbar-nav text-right ][ navigation__itemholder ]">
+            <li id="play" class="[ nav-item ][ navigation__item ]" onclick="playMusic()">
+                <span class="[ navigation__spanlink ]"><i id="play" class="[ fas fa-volume-up ][ navigation__link ]" ></i></span>
+            </li>
+            <li id="stop" class="[ nav-item ][ navigation__item ]" onclick="pauseMusic()">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-volume-mute ][ navigation__link ]" ></i></span>
+            </li> 
+            <li class="[ nav-item ][ navigation__item ]">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-question ][ navigation__link ]"></i></span>
+            </li>
+            <li class="[ nav-item ][ navigation__item ]" onclick="reloadPage()">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-redo ][ navigation__link ]"></i></span>
+            </li>
+            <li class="[ nav-item ][ navigation__item ]" onclick="exitGame()">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-times ][ navigation__link ]"></i></span>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="[ container col-md-12 col-lg-10 col-xl-10 ][ char-selection__container ]">
+    <h2 class="[ heading heading--large ]">Select two players</h2>
+    <div class="[ row ][ page ]">
+        <div class="[ col-md-3 ][ char-selection__box ]">
+            <div class="[ row ][ char-selection ]">
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]" >
+                    <img class="[ char-selection__image ]" data-name="Sansa Stark" src="images/sansa-thumbnail.png" alt="Sansa character" onclick="selectCharacter('sansa')" id="sansa">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Tyrion Lannister" src="images/tyrion-thumbnail.png" alt="Tyrion character" onclick="selectCharacter('tyrion')" id="tyrion">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Ghost" src="images/ghost-thumbnail.png" alt="Ghost Wolf character" onclick="selectCharacter('ghost')" id="ghost">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Cersei Lannister" src="images/cersei-thumbnail.png" alt="Cersei character" onclick="selectCharacter('cersei')" id="cersei">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Jon Snow" id="jon" src="images/jon-thumbnail.png" alt="John Snow character" onclick="selectCharacter('jon')">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]"  id="nightsKing" src="images/nightsking-thumbnail.png" alt="Nights King character" onclick="selectCharacter('nightsKing')">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" id="raven" src="images/raven-thumbnail.png" alt="Three Eyed Raven character" onclick="selectCharacter('raven')">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Varys" id="varys" src="images/varys-thumbnail.png" alt="Varys character" onclick="selectCharacter('varys')">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Arya Stark" id="arya" src="images/arya-thumbnail.png" alt="Arya character" onclick="selectCharacter('arya')">
+                </div>
+                <div class="[ col-sm ][ char-selection__thumbnail selectOne ]">
+                    <img class="[ char-selection__image ]" data-name="Daenerys Targaryen" id="daenerys" src="images/daenerys-thumbnail.png" alt="Daenerys character" onclick="selectCharacter('daenerys')">
+                </div>
+            </div><!--row char-selection-->
+        </div><!--col char-selection-->
+        <div class="[ col-md-9 align-items-end ][  ]">
+            <div class="[ row ]" class="[ character ]">
+                <div id="showCharacter" class="[ row ][ character ]">
+                    <div id="loading">
+                        <h2 class="[ heading heading--viewmore display-content ]">Click on a character to view more</h2>
+                        <i class="[ fab fa-wolf-pack-battalion ][ icon icon__wolf ]"></i></i>
+                    </div>
+                </div>
+            </div><!--row character-->
+        </div><!--col character-->
+    </div><!--row whole page--> 
+    <div class="[ bottom-nav ]">
+        <a href="index.html" id="goToStart" class="[ btn btn__medium ]">Back</a>
+        <p id="goToBoardGame" class="[ btn btn__medium ]">Select</p>
+    </div>
+
+
+
+
+</div><!--container whole page-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="scripts/charselect.js"></script>
+<script src="scripts/nextcharbtn.js"></script>
+<script src="scripts/menu.js"></script>

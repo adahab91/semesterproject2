@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+.heading {
+  color: #F3F3F3;
+  font-family: "Philosopher", sans-serif;
+}
+.heading--large {
+  font-size: 3em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.heading--medium {
+  color: #F3F3F3;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-right: 30px;
+  letter-spacing: 3px;
+}
+.heading--viewmore {
+  font-size: 1.5em;
+}
+
+p {
+  color: #F3F3F3;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo--small {
+  width: 350px;
+}
+.logo--large {
+  min-width: 200px;
+  margin-bottom: 50px;
+}
+.logo--navigation {
+  margin-left: 30px;
+}
+
+.icon {
+  font-size: 3.5em;
+  color: #F3F3F3;
+  margin-top: 20px;
+}
+.icon__wolf {
+  opacity: 0.7;
+}
+
+#playIcon {
+  color: #FFA500;
+}
+
+.btn {
+  background-color: #730A00;
+  border-radius: 0;
+  border: none;
+  margin-top: 15px;
+  color: #F3F3F3 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn__medium {
+  width: 170px;
+  padding: 7px 5px;
+  margin-left: 5px;
+  font-size: 1.3em;
+  font-family: "Philosopher", sans-serif;
+  border: 5px outset #400101;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.btn__large {
+  padding: 15px;
+  width: 230px;
+  font-size: 1.3em;
+  font-family: "Open Sans", sans-serif;
+  border: 5px outset #400101;
+  letter-spacing: 3px;
+}
+.btn__nav {
+  padding: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,51 @@
+@import "variables";
+
+
+.navigation{
+    background: transparent;
+    padding: 0;
+    &__button{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    &__content{
+        position: absolute;
+        right: 0px;
+        top: 100px;
+    }
+    &__toggler-icon{
+        color: $white;
+        font-size: 2em;
+        background-color: $light-black;
+        width: 120px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    &__itemholder{
+
+    }
+    &__item{
+
+    }
+    &__link{
+        color: $white;
+        margin-right: 0px;
+        font-size: 2em;
+        background-color: $light-black;
+        width: 120px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        margin-top: -20px;
+        text-align: center;
+        
+    }
+    &__spanlink{
+        
+        :hover{
+            color: $orange;
+            cursor: pointer;
+        }
+
+    }
+}

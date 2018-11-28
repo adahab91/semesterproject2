@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+body {
+  background: url("../images/background-map.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#loading {
+  text-align: center;
+  color: black;
+  margin: 5px 5px 10px 20px;
+  height: 540px;
+  width: 635px;
+}
+
+.display-content {
+  margin-top: 200px;
+  padding-right: 0;
+  opacity: 0.7;
+}
+
+.page {
+  margin-left: auto;
+}
+
+.char-selection__container {
+  max-width: 1000px;
+  margin-top: 100px;
+  background-color: #0E0E0E;
+  padding: 60px 60px 0;
+}
+.char-selection__thumbnail {
+  text-align: center;
+  padding: 0;
+}
+.char-selection__image {
+  display: inline-block;
+  width: 100px;
+  background-color: #0E0E0E;
+  border: 5px outset #303A40;
+  margin: 5px;
+}
+
+.character {
+  margin: 5px 5px 10px 20px;
+  height: 540px;
+  width: 635px;
+  border: 5px outset #303A40;
+  background-color: #3A4040;
+}
+.character__image {
+  display: block;
+  margin-left: auto;
+  height: 520px;
+  padding: 50px;
+}
+.character__image--holder {
+  padding: 0;
+}
+.character__info {
+  align-content: center;
+  background-color: transparent;
+}
+.character__stats {
+  font-size: 1em;
+  padding-right: 30px;
+}
+.character__stats--strong {
+  color: #FFA500;
+  font-weight: 700;
+}
+.character__name {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+#goToStart {
+  height: 55px;
+}
+
+/*# sourceMappingURL=char.css.map */

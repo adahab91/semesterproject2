@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+body {
+  background-color: #0E0E0E;
+  /*  background: url("../images/fantasy-3194227_1920.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; */
+  min-width: 1366px;
+}
+
+.game-board__container {
+  position: relative;
+  max-width: 1100px;
+  margin-top: 0px;
+  background-color: #0E0E0E;
+  padding: 60px;
+}
+@media screen and (max-width: 1367px) {
+  .game-board__container {
+    max-width: 100%;
+    padding: 0px;
+  }
+}
+.game-board__row {
+  padding: 0;
+  max-width: 842px;
+  min-width: 842px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1367px) {
+  .game-board__row {
+    max-width: 600px;
+    min-width: 600px;
+    margin-left: 200px;
+    margin-right: 0;
+  }
+}
+
+.tile {
+  min-width: 140px;
+  max-width: 140px;
+  min-height: 140px;
+}
+@media screen and (max-width: 1367px) {
+  .tile {
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+  }
+}
+.tile__number {
+  font-family: "Philosopher", sans-serif;
+}
+
+.even {
+  background-color: #5E818D;
+}
+
+.dice__container {
+  position: relative;
+}
+.dice__canvas {
+  background-color: white;
+  position: absolute;
+  bottom: 100px;
+}
+.dice__button {
+  position: absolute;
+  bottom: 0px;
+}
+
+/*# sourceMappingURL=game.css.map */

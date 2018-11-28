@@ -1,0 +1,88 @@
+//importing stuff
+@import "variables";
+
+// making general styles for the whole site
+.heading{
+    color: $white;
+    font-family: $headings;
+    &--large{
+        font-size: 3em;
+        text-transform: uppercase;
+        opacity: .5;
+    }
+    &--medium{
+        color: $white;
+        font-size: 2.3em;
+        text-transform: uppercase;
+        padding-top: 40px;
+        padding-right: 30px;
+        letter-spacing: 3px;
+    }
+    &--viewmore{
+        font-size: 1.5em;
+    }
+}
+p{
+    color: $white;
+    font-family: $text;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.logo{
+    &--small{
+        width: 350px;
+    }
+    &--large{
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+    &--navigation{
+        margin-left: 30px;
+    }
+}
+.icon{
+    font-size: 3.5em;
+    color: $white;
+    margin-top: 20px;
+    &__wolf{
+        opacity: .7;
+    }
+    
+}
+
+#playIcon {
+    color: $orange;
+}
+
+
+.btn{
+    background-color: $red;
+    border-radius: 0;
+    border: none;
+    margin-top: 15px;
+    color: $white!important;
+    text-transform: uppercase;
+    font-weight: bold;
+    &__medium{
+        width: 170px;
+        padding: 7px 5px;
+        margin-left: 5px;
+        font-size: 1.3em;
+        font-family: $button;
+        border: 5px outset $dark-red;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+    &__large{
+        padding: 15px;
+        width: 230px;
+        font-size: 1.3em;
+        font-family: $text;
+        border: 5px outset $dark-red;
+        letter-spacing: 3px;
+    }
+    &__nav{
+        padding: 0;
+    }
+}

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+.navigation {
+  background: transparent;
+  padding: 0;
+}
+.navigation__button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.navigation__content {
+  position: absolute;
+  right: 0px;
+  top: 100px;
+}
+.navigation__toggler-icon {
+  color: #F3F3F3;
+  font-size: 2em;
+  background-color: #141414;
+  width: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navigation__link {
+  color: #F3F3F3;
+  margin-right: 0px;
+  font-size: 2em;
+  background-color: #141414;
+  width: 120px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: -20px;
+  text-align: center;
+}
+.navigation__spanlink :hover {
+  color: #FFA500;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=nav.css.map */
