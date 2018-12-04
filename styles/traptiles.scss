@@ -1,0 +1,122 @@
+@import "variables";
+
+
+
+//TILE   4   HORSE
+#trap1{
+    background: url("../images/horsetile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+#endTrap1{
+    background: url("../images/horsetile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+
+
+//TILE   7  CREEPY FOREST
+#trap2{
+    background: url("../images/creepyforesttile.jpg") center ;
+    background-size: contain;
+    
+    border: 5px outset $grey-blue;
+}
+#endTrap2{
+    background: url("../images/creepyforesttile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+
+//TILE  10
+#trap3{
+    background: url("../images/raventile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+#endTrap3{
+    background: url("../images/raventile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+//TILE  13
+#trap4{
+    background: url("../images/questiontile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+
+
+
+//TILE  15
+#trap5{
+    background: url("../images/ghosttile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+
+#endTrap5{
+    background: url("../images/ghosttile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+//TILE  23
+#trap6{
+    background: url("../images/swordtile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+
+#endTrap6{
+    background: url("../images/swordtile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+//TILE  25
+#trap7{
+    background: url("../images/knighttile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+#endTrap7{
+    background: url("../images/knighttile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+//TILE  29  DRAGON FLY
+#trap8{
+    background: url("../images/flyingdragontile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+#endTrap8{
+    background: url("../images/flyingdragontile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}
+
+
+//TILE 30  FIGHTING DRAGONS
+#trap9{
+    background: url("../images/dragonfighttile.jpg") center ;
+    background-size: contain;
+    border: 5px outset $grey-blue;
+}
+
+#endTrap9{
+    background: url("../images/dragonfighttile.jpg") center ;
+    background-size: contain;
+    opacity: .1;
+}

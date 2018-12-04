@@ -6,6 +6,9 @@ var isCersei = false;
 var isVarys = false;
 var isDaenerys = false;
 var isJon = false;
+var isMelisandre = false;
+var isSamwell = false;
+var isSandor = false;
 
 //RESET LOCAL STORAGE ONLOAD
 function resetLocalStorage(){
@@ -120,12 +123,50 @@ function selectCharacter(character){ //character is attribute for clickfunction 
                 addValuesToLocalStorage("playerJon", character);
             }
             break;
+            case 'melisandre':
+            if(isMelisandre){
+                document.getElementById(character).style.border = '5px outset #303A40';
+                isMelisandre = false;
+                emptyCard();
+                removeValueFromLocalStorage("playerMelisandre");
+            }
+            else{
+                isMelisandre = true;
+                getData('https://anapioficeandfire.com/api/characters/743',character);
+                addValuesToLocalStorage("playerMelisandre", character);
+            }
+            break;
+            case 'sandor':
+            if(isSandor){
+                document.getElementById(character).style.border = '5px outset #303A40';
+                isSandor = false;
+                emptyCard();
+                removeValueFromLocalStorage("playerSandor");
+            }
+            else{
+                isSandor = true;
+                getData('https://anapioficeandfire.com/api/characters/955',character);
+                addValuesToLocalStorage("playerSandor", character);
+            }
+            break;
+            case 'samwell':
+            if(isSamwell){
+                document.getElementById(character).style.border = '5px outset #303A40';
+                isSamwell = false;
+                emptyCard();
+                removeValueFromLocalStorage("playerSamwell");
+            }
+            else{
+                isSamwell = true;
+                getData('https://anapioficeandfire.com/api/characters/954',character);
+                addValuesToLocalStorage("playerSamwell", character);
+            }
+            break;
         default:
             console.log('Sorry, there is a problem here  ');
     }
 }
 function getData(Url,id) {
-    //document.getElementById('loading').style.display = 'block';
     fetch(Url)
         .then((response) => {
             return response.json();
@@ -144,10 +185,9 @@ function populateCardInfo(result, id){
         '<p class="[ character__born character__stats ]"><span class="[ character__stats--strong ]">Born : </span>' + result.born + '</p>'+
         '<p class="[ character__gender character__stats ]"><span class="[ character__stats--strong ]">Gender : </span>' + result.gender + '</p>'+
         '<p class="[ character__culture character__stats ]"><span class="[ character__stats--strong ]">Culture : </span>' + result.culture + '</p>'+
-        '<p class="[ character__title character__stats ]"><span class="[ character__stats--strong ]">Titles : </span>' + result.titles + '</p>' +
+        '<p class="[ character__title character__stats ]"><span class="[ character__stats--strong ]">Aliases : </span>' + result.aliases + '</p>' +
         '</div>';
     document.getElementById('showCharacter').innerHTML += displayChar;
-    //document.getElementById('loading').style.display = 'none';
 };
 
 function emptyCard(){

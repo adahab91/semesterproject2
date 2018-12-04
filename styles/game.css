@@ -12,9 +12,10 @@ body {
 .game-board__container {
   position: relative;
   max-width: 1100px;
-  margin-top: 0px;
+  margin-top: 30px;
   background-color: #0E0E0E;
   padding: 60px;
+  max-height: 800px;
 }
 @media screen and (max-width: 1367px) {
   .game-board__container {
@@ -38,6 +39,34 @@ body {
   }
 }
 
+.shout-out {
+  position: absolute;
+  z-index: 3;
+  animation-duration: 1s;
+  animation-name: slidedown;
+  animation-iteration-count: 1;
+  width: 1000px;
+  display: block;
+  border: 5px outset #303A40;
+}
+.shout-out__text {
+  margin-top: 250px;
+  margin-left: 20%;
+  font-family: "Philosopher", sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+}
+.shout-out__text--good {
+  color: white;
+  background-color: rgba(94, 129, 141, 0.7);
+}
+.shout-out__text--bad {
+  color: white;
+  background-color: rgba(115, 10, 0, 0.7);
+}
+
 .tile {
   min-width: 140px;
   max-width: 140px;
@@ -58,17 +87,199 @@ body {
   background-color: #5E818D;
 }
 
+.player__token--playerSansa {
+  height: 125px;
+}
+.player__token--playerMelisandre {
+  height: 125px;
+}
+.player__token--playerJon {
+  height: 120px;
+}
+.player__token--playerCersei {
+  height: 125px;
+}
+.player__token--playerVarys {
+  height: 125px;
+}
+.player__token--playerArya {
+  height: 100px;
+}
+.player__token--playerDaenerys {
+  height: 120px;
+}
+.player__token--playerSamwell {
+  height: 125px;
+}
+.player__token--playerTyrion {
+  height: 100px;
+}
+.player__token--playerSandor {
+  height: 130px;
+}
+
 .dice__container {
   position: relative;
 }
 .dice__canvas {
-  background-color: white;
   position: absolute;
-  bottom: 100px;
+  bottom: 140px;
+  left: 30px;
+  animation: shake2 0.5s;
+  animation-iteration-count: 2;
+}
+.dice__roll-again {
+  position: absolute;
+  bottom: 75px;
+  left: 50px;
+  width: 200px;
+  font-family: "Philosopher", sans-serif;
+  background-color: #FFA500;
+  padding: 5px 5px 5px 10px;
+  color: #0E0E0E;
+  font-weight: 700;
+  z-index: 1;
+  display: none;
+}
+.dice__roll-again--arrow {
+  position: absolute;
+  bottom: 105px;
+  left: 100px;
+  font-size: 6em;
+  color: #FFA500;
+  display: none;
+  height: 40px;
 }
 .dice__button {
   position: absolute;
   bottom: 0px;
+}
+.dice__button--inactive {
+  background-color: #0E0E0E;
+  border: 5px outset #303A40;
+  cursor: context-menu !important;
+}
+
+@keyframes slidedown {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 30px;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes shake1 {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes shake2 {
+  0% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, -3px) rotate(-5deg);
+  }
+  20% {
+    transform: translate(-4px, 1px) rotate(5deg);
+  }
+  30% {
+    transform: translate(4px, 3px) rotate(0deg);
+  }
+  40% {
+    transform: translate(2px, -2px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-2px, 3px) rotate(-5deg);
+  }
+  60% {
+    transform: translate(-4px, 2px) rotate(0deg);
+  }
+  70% {
+    transform: translate(4px, 0px) rotate(-5deg);
+  }
+  80% {
+    transform: translate(-2px, -3px) rotate(5deg);
+  }
+  90% {
+    transform: translate(2px, 3px) rotate(0deg);
+  }
+  100% {
+    transform: translate(2px, -3px) rotate(-5deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /*# sourceMappingURL=game.css.map */

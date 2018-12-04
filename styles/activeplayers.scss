@@ -1,0 +1,25 @@
+@import "variables";
+#activePlayer{
+    position: relative;
+    top: -560px;
+    left: -140px;
+    width: 140px;
+    height: 280px;
+    background-color: $black;
+    border: 5px outset $grey-blue;
+}
+
+#activePlayerOne{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 90px;
+}
+
+#activePlayerTwo{
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    filter: opacity(30%);
+    width: 90px;
+}

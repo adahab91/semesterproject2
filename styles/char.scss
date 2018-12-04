@@ -1,16 +1,13 @@
 @import "variables";
 body{
-    
     background: url("../images/background-map.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-//FJERNE DEN HER???
 #loading{
     text-align: center; 
-    color: black;  
     margin: 5px 5px 10px 20px;
     height: 540px;
     width: 635px;
@@ -50,6 +47,7 @@ body{
     width: 635px;
     border: 5px outset $grey-blue;
     background-color: $grey;
+    
     &__image{
         display: block;
         margin-left: auto;
@@ -66,6 +64,7 @@ body{
     &__stats{
         font-size: 1em;
         padding-right: 30px;
+        overflow: auto;
         &--strong{
             color: $orange;
             font-weight: 700;
@@ -75,6 +74,27 @@ body{
         font-weight: 500;
         margin-bottom: 40px;
     }
+}
+
+//styling owerflow scrollbar 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 
 .bottom-nav{

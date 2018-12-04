@@ -9,7 +9,6 @@ body {
 
 #loading {
   text-align: center;
-  color: black;
   margin: 5px 5px 10px 20px;
   height: 540px;
   width: 635px;
@@ -66,6 +65,7 @@ body {
 .character__stats {
   font-size: 1em;
   padding-right: 30px;
+  overflow: auto;
 }
 .character__stats--strong {
   color: #FFA500;
@@ -74,6 +74,26 @@ body {
 .character__name {
   font-weight: 500;
   margin-bottom: 40px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F3F3F3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .bottom-nav {

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+#activePlayer {
+  position: relative;
+  top: -560px;
+  left: -140px;
+  width: 140px;
+  height: 280px;
+  background-color: #0E0E0E;
+  border: 5px outset #303A40;
+}
+
+#activePlayerOne {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 90px;
+}
+
+#activePlayerTwo {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  filter: opacity(30%);
+  width: 90px;
+}
+
+/*# sourceMappingURL=activeplayers.css.map */

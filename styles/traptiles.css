@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+#trap1 {
+  background: url("../images/horsetile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap1 {
+  background: url("../images/horsetile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap2 {
+  background: url("../images/creepyforesttile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap2 {
+  background: url("../images/creepyforesttile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap3 {
+  background: url("../images/raventile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap3 {
+  background: url("../images/raventile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap4 {
+  background: url("../images/questiontile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#trap5 {
+  background: url("../images/ghosttile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap5 {
+  background: url("../images/ghosttile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap6 {
+  background: url("../images/swordtile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap6 {
+  background: url("../images/swordtile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap7 {
+  background: url("../images/knighttile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap7 {
+  background: url("../images/knighttile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap8 {
+  background: url("../images/flyingdragontile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap8 {
+  background: url("../images/flyingdragontile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+#trap9 {
+  background: url("../images/dragonfighttile.jpg") center;
+  background-size: contain;
+  border: 5px outset #303A40;
+}
+
+#endTrap9 {
+  background: url("../images/dragonfighttile.jpg") center;
+  background-size: contain;
+  opacity: 0.1;
+}
+
+/*# sourceMappingURL=traptiles.css.map */

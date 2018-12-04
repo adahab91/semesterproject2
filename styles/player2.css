@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
+#playerTwo {
+  position: absolute;
+  top: 630px;
+  left: -90px;
+  z-index: 0;
+}
+
+#playerTwo[data-number="1"] {
+  top: 630px;
+  left: 80px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="2"] {
+  top: 630px;
+  left: 220px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="3"] {
+  top: 630px;
+  left: 360px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="4"] {
+  top: 630px;
+  left: 500px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="5"] {
+  top: 630px;
+  left: 640px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="6"] {
+  top: 630px;
+  left: 780px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="7"] {
+  top: 490px;
+  left: 820px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="8"] {
+  top: 490px;
+  left: 680px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="9"] {
+  top: 490px;
+  left: 540px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="10"] {
+  top: 490px;
+  left: 380px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="11"] {
+  top: 490px;
+  left: 260px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="12"] {
+  top: 490px;
+  left: 100px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="13"] {
+  top: 350px;
+  left: 80px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="14"] {
+  top: 350px;
+  left: 220px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="15"] {
+  top: 350px;
+  left: 360px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="16"] {
+  top: 350px;
+  left: 500px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="17"] {
+  top: 350px;
+  left: 640px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="18"] {
+  top: 350px;
+  left: 780px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="19"] {
+  top: 210px;
+  left: 820px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="20"] {
+  top: 210px;
+  left: 680px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="21"] {
+  top: 210px;
+  left: 540px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="22"] {
+  top: 210px;
+  left: 400px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="23"] {
+  top: 210px;
+  left: 240px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="24"] {
+  top: 210px;
+  left: 120px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="25"] {
+  top: 70px;
+  left: 80px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="26"] {
+  top: 70px;
+  left: 220px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="27"] {
+  top: 70px;
+  left: 360px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="28"] {
+  top: 70px;
+  left: 500px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="29"] {
+  top: 70px;
+  left: 640px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="30"] {
+  top: 70px;
+  left: 780px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="31"] {
+  top: 70px;
+  left: 920px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="32"] {
+  top: 70px;
+  left: 920px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="33"] {
+  top: 70px;
+  left: 920px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="34"] {
+  top: 70px;
+  left: 920px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="35"] {
+  top: 70px;
+  left: 920px;
+  transition: all 3s;
+}
+
+#playerTwo[data-number="36"] {
+  top: 70px;
+  left: 920px;
+  transition: all 3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/*# sourceMappingURL=player2.css.map */
