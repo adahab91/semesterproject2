@@ -80,11 +80,12 @@ body {
 .shout-out{
     position: absolute;
     z-index: 3;
-    width: 985px;
+    width: 1020px;
     display: block;
     border: 5px outset $grey-blue;
     @media screen and (max-width: 1367px ) {
-        width: 850px;
+        width: 1020px;
+        left: -30px;
     } 
     &__text{
         margin-top: 250px;
@@ -187,7 +188,7 @@ body {
     &__roll-again{
         position: absolute;
         bottom: 75px;
-        left: 50px;
+        left: 20px;
         width: 200px;
         font-family: $button;
         background-color: $orange;
@@ -498,5 +499,5 @@ body {
 
   .fa-dragon{
       color: $white;
-      font-size: .8em;
+      font-size: .4em;
   }

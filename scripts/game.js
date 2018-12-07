@@ -146,7 +146,7 @@ function rollDice(){
         case 7: //TRAP NR 2
             diceButton.style.display = "none";
             //add message     
-            slideInText("You got lost in Wolfswood.. <br> You walked the wrong way back to 2", "bad");
+            slideInText("You got lost in Wolfswood.. <br> You walked the wrong way back to 2..", "bad");
             
             function delayMoveTrapTile7(){
                 setTimeout(function(){
@@ -167,7 +167,7 @@ function rollDice(){
         case 10: //TRAP NR 3
             diceButton.style.display = "none";
             //add message
-            slideInText("You got distracted by the Three-Eyed Raven..<br> Walk back to 3", "bad");
+            slideInText("You got distracted by the Three-Eyed Raven..<br> Walk back to 3..", "bad");
             
             function delayMoveTrapTile10(){
                 setTimeout(function(){
@@ -191,7 +191,7 @@ function rollDice(){
         case 13: //TRAP NR 4
             diceButton.style.display = "none";
             //add message
-            slideInText("Walk back the amount on the dice", "bad");
+            slideInText("Walk back the amount on the dice..", "bad");
             
             function delayMoveTrapTile13(){
                 setTimeout(function(){
@@ -212,7 +212,7 @@ function rollDice(){
         case 15: //TRAP NR 5
             diceButton.style.display = "none";
             //add message
-            slideInText("Ghost helped you clear the way! <br> Jump up to 22", "good");
+            slideInText("Ghost helped you clear the way! <br> Jump up to 22!", "good");
             function delayMoveTrapTile15(){
                 setTimeout(function(){
                     //animate and style passive and active tokens

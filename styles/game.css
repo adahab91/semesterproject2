@@ -83,13 +83,14 @@ body {
 .shout-out {
   position: absolute;
   z-index: 3;
-  width: 985px;
+  width: 1020px;
   display: block;
   border: 5px outset #303A40;
 }
 @media screen and (max-width: 1367px) {
   .shout-out {
-    width: 850px;
+    width: 1020px;
+    left: -30px;
   }
 }
 .shout-out__text {
@@ -185,7 +186,7 @@ body {
 .dice__roll-again {
   position: absolute;
   bottom: 75px;
-  left: 50px;
+  left: 20px;
   width: 200px;
   font-family: "Philosopher", sans-serif;
   background-color: #FFA500;
@@ -754,7 +755,7 @@ body {
 }
 .fa-dragon {
   color: #F3F3F3;
-  font-size: 0.8em;
+  font-size: 0.4em;
 }
 
 /*# sourceMappingURL=game.css.map */
