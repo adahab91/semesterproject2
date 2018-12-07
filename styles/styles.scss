@@ -3,12 +3,23 @@
 
 // making general styles for the whole site
 .heading{
-    color: $white;
+    color: $white; 
     font-family: $headings;
     &--large{
         font-size: 3em;
         text-transform: uppercase;
         opacity: .5;
+        @media screen and (max-width: 1367px ) {
+            font-size: 2.3em;
+        }
+        @media screen and (max-width: 450px ) {
+            font-size: 2.1em;
+            padding-left: 20px;
+        }
+        @media screen and (max-width: 450px ) {
+            font-size: 1.8em;
+            padding-left: 25px;
+        }
     }
     &--medium{
         color: $white;
@@ -17,6 +28,7 @@
         padding-top: 40px;
         padding-right: 30px;
         letter-spacing: 3px;
+        
     }
     &--viewmore{
         font-size: 1.5em;
@@ -32,13 +44,22 @@ p{
 .logo{
     &--small{
         width: 350px;
-    }
-    &--large{
-        min-width: 200px;
-        margin-bottom: 50px;
+        padding-top: 10px;
+        @media screen and (max-width: 992px ) {
+            width: 250px;
+        }
+        @media screen and (max-width: 400px ) {
+            width: 200px;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
     }
     &--navigation{
         margin-left: 30px;
+        @media screen and (max-width: 400px ) {
+            margin-left: 10px;
+        }
     }
 }
 .icon{
@@ -64,7 +85,22 @@ p{
     color: $white!important;
     text-transform: uppercase;
     font-weight: bold;
+    &:hover{
+        border: 5px inset $dark-red;
+        background-color: $red2;
+    }
+    &__small{
+        width: 120px;
+        padding: 5px 0px;
+        margin-left: 5px;
+        font-size: .8em;
+        font-family: $button;
+        border: 5px outset $dark-red;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
     &__medium{
+        z-index: 1;
         width: 170px;
         padding: 7px 5px;
         margin-left: 5px;
@@ -73,6 +109,11 @@ p{
         border: 5px outset $dark-red;
         letter-spacing: 3px;
         font-weight: 700;
+        @media screen and (max-width: 1367px ) {
+            width: 150px;
+            font-size: 1.3em;
+        }
+        
     }
     &__large{
         padding: 15px;
@@ -81,6 +122,10 @@ p{
         font-family: $text;
         border: 5px outset $dark-red;
         letter-spacing: 3px;
+        &:hover{
+            border: 5px inset $dark-red;
+            background-color: $red2;
+        }
     }
     &__nav{
         padding: 0;

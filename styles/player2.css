@@ -1,225 +1,410 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Philosopher:400,700");
 #playerTwo {
   position: absolute;
-  top: 630px;
+  bottom: 45px;
   left: -90px;
-  z-index: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="1"] {
-  top: 630px;
+  bottom: 45px;
   left: 80px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="1"] {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="2"] {
-  top: 630px;
+  bottom: 45px;
   left: 220px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="2"] {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="3"] {
-  top: 630px;
+  bottom: 45px;
   left: 360px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="3"] {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="4"] {
-  top: 630px;
+  bottom: 45px;
   left: 500px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="4"] {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="5"] {
-  top: 630px;
+  bottom: 45px;
   left: 640px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="5"] {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="6"] {
-  top: 630px;
+  bottom: 45px;
   left: 780px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="6"] {
+    bottom: 20px;
+  }
 }
 
 #playerTwo[data-number="7"] {
-  top: 490px;
+  bottom: 185px;
   left: 820px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="7"] {
+    bottom: 160px;
+  }
 }
 
 #playerTwo[data-number="8"] {
-  top: 490px;
+  bottom: 185px;
   left: 680px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="8"] {
+    bottom: 160px;
+  }
 }
 
 #playerTwo[data-number="9"] {
-  top: 490px;
+  bottom: 185px;
   left: 540px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="9"] {
+    bottom: 160px;
+  }
 }
 
 #playerTwo[data-number="10"] {
-  top: 490px;
+  bottom: 185px;
   left: 380px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="10"] {
+    bottom: 160px;
+  }
+}
 
 #playerTwo[data-number="11"] {
-  top: 490px;
+  bottom: 185px;
   left: 260px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="11"] {
+    bottom: 160px;
+  }
+}
 
 #playerTwo[data-number="12"] {
-  top: 490px;
+  bottom: 185px;
   left: 100px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="12"] {
+    bottom: 160px;
+  }
+}
 
 #playerTwo[data-number="13"] {
-  top: 350px;
+  bottom: 325px;
   left: 80px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="13"] {
+    bottom: 300px;
+  }
 }
 
 #playerTwo[data-number="14"] {
-  top: 350px;
+  bottom: 325px;
   left: 220px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="14"] {
+    bottom: 300px;
+  }
 }
 
 #playerTwo[data-number="15"] {
-  top: 350px;
+  bottom: 325px;
   left: 360px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="15"] {
+    bottom: 300px;
+  }
 }
 
 #playerTwo[data-number="16"] {
-  top: 350px;
+  bottom: 325px;
   left: 500px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="16"] {
+    bottom: 300px;
+  }
 }
 
 #playerTwo[data-number="17"] {
-  top: 350px;
+  bottom: 325px;
   left: 640px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="17"] {
+    bottom: 300px;
+  }
 }
 
 #playerTwo[data-number="18"] {
-  top: 350px;
+  bottom: 325px;
   left: 780px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="18"] {
+    bottom: 300px;
+  }
 }
 
 #playerTwo[data-number="19"] {
-  top: 210px;
+  bottom: 465px;
   left: 820px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="19"] {
+    bottom: 440px;
+  }
+}
 
 #playerTwo[data-number="20"] {
-  top: 210px;
+  bottom: 465px;
   left: 680px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="20"] {
+    bottom: 440px;
+  }
+}
 
 #playerTwo[data-number="21"] {
-  top: 210px;
+  bottom: 465px;
   left: 540px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="21"] {
+    bottom: 440px;
+  }
+}
 
 #playerTwo[data-number="22"] {
-  top: 210px;
+  bottom: 465px;
   left: 400px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="22"] {
+    bottom: 440px;
+  }
+}
 
 #playerTwo[data-number="23"] {
-  top: 210px;
+  bottom: 465px;
   left: 240px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="23"] {
+    bottom: 440px;
+  }
+}
 
 #playerTwo[data-number="24"] {
-  top: 210px;
+  bottom: 465px;
   left: 120px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="24"] {
+    bottom: 440px;
+  }
+}
 
 #playerTwo[data-number="25"] {
-  top: 70px;
+  bottom: 605px;
   left: 80px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="25"] {
+    bottom: 580px;
+  }
+}
 
 #playerTwo[data-number="26"] {
-  top: 70px;
+  bottom: 605px;
   left: 220px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="26"] {
+    bottom: 580px;
+  }
+}
 
 #playerTwo[data-number="27"] {
-  top: 70px;
+  bottom: 605px;
   left: 360px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="27"] {
+    bottom: 580px;
+  }
+}
 
 #playerTwo[data-number="28"] {
-  top: 70px;
+  bottom: 605px;
   left: 500px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="28"] {
+    bottom: 580px;
+  }
+}
 
 #playerTwo[data-number="29"] {
-  top: 70px;
+  bottom: 605px;
   left: 640px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="29"] {
+    bottom: 580px;
+  }
+}
 
 #playerTwo[data-number="30"] {
-  top: 70px;
+  bottom: 605px;
   left: 780px;
   transition: all 3s;
 }
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="30"] {
+    bottom: 580px;
+  }
+}
 
 #playerTwo[data-number="31"] {
-  top: 70px;
-  left: 920px;
+  bottom: 605px;
+  left: 955px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="31"] {
+    bottom: 580px;
+  }
 }
 
 #playerTwo[data-number="32"] {
-  top: 70px;
-  left: 920px;
+  bottom: 605px;
+  left: 955px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="32"] {
+    bottom: 580px;
+  }
 }
 
 #playerTwo[data-number="33"] {
-  top: 70px;
-  left: 920px;
+  bottom: 605px;
+  left: 955px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="33"] {
+    bottom: 580px;
+  }
 }
 
 #playerTwo[data-number="34"] {
-  top: 70px;
-  left: 920px;
+  bottom: 605px;
+  left: 955px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="34"] {
+    bottom: 580px;
+  }
 }
 
 #playerTwo[data-number="35"] {
-  top: 70px;
-  left: 920px;
+  bottom: 605px;
+  left: 955px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="35"] {
+    bottom: 580px;
+  }
 }
 
 #playerTwo[data-number="36"] {
-  top: 70px;
-  left: 920px;
+  bottom: 605px;
+  left: 955px;
   transition: all 3s;
+}
+@media screen and (max-width: 1367px) {
+  #playerTwo[data-number="36"] {
+    bottom: 580px;
+  }
 }
 
 @keyframes shake {

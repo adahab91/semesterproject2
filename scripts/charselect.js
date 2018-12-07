@@ -22,7 +22,7 @@ function addValuesToLocalStorage(key, value){
 
 //REMOVES VALUE TO LOCAL STORAGE
 function removeValueFromLocalStorage(key){
-    localStorage.removeItem(key); 
+    localStorage.removeItem(key);  
 };
 
 
@@ -187,7 +187,7 @@ function populateCardInfo(result, id){
         '<p class="[ character__culture character__stats ]"><span class="[ character__stats--strong ]">Culture : </span>' + result.culture + '</p>'+
         '<p class="[ character__title character__stats ]"><span class="[ character__stats--strong ]">Aliases : </span>' + result.aliases + '</p>' +
         '</div>';
-    document.getElementById('showCharacter').innerHTML += displayChar;
+    document.getElementById('showCharacter').innerHTML = displayChar;
 };
 
 function emptyCard(){

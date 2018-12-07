@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Ada Elise Håberg">
+    <meta name="description" content="Congratulations, you rule the iron throne! Share with friends and play together.">
+    <meta name="keywords" content="game of thrones, got, board game, share, game, online, free, board, free online, play">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/winner.css">
+    <link rel="stylesheet" href="styles/fireworks.css">
+    <title>GAME OF BOARDS - Share with friends and play together!</title>
+</head>
+<div id="body">
+<audio id="myAudio" autoplay loop>
+  <source src="music/01. A Feast for Crows.mp3" type="audio/mp3">
+  Your browser does not support the audio element. 
+</audio>
+
+<div class="pyro">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+
+<nav class="[ navbar navbar-light fixed-top ][ navigation ]">
+    <img class="[ logo--small logo--navigation ]" src="images/logo-white.png">
+    <div class="[ col-2 text-right ][ navigation__button ]">
+        <button class="[ navbar-toggler ][ btn__nav ]" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="[ fas fa-cog ][ navigation__toggler-icon ]"></i>
+        </button>
+    </div>
+
+    <div class="[ col-2 collapse navbar-collapse ][ navigation__content ]" id="navbarSupportedContent">
+        <ul class="[ navbar-nav text-right ][ navigation__itemholder ]">
+            <li id="play" class="[ nav-item ][ navigation__item ]" onclick="playMusic()">
+                <span class="[ navigation__spanlink ]"><i id="play" class="[ fas fa-volume-up ][ navigation__link ]" ></i></span>
+            </li>
+            <li id="stop" class="[ nav-item ][ navigation__item ]" onclick="pauseMusic()">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-volume-mute ][ navigation__link ]" ></i></span>
+            </li> 
+            <li class="[ nav-item ][ navigation__item ]" onclick="reloadPage()">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-redo ][ navigation__link ]"></i></span>
+            </li>
+            <li class="[ nav-item ][ navigation__item ]" onclick="exitGame()">
+                <span class="[ navigation__spanlink ]"><i class="[ fas fa-times ][ navigation__link ]"></i></span>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="winner" class="[ winner ]">
+    <img class="[ winner__throne ]"id="throne" src="images/winnerthrone.png" alt="Iron Throne">
+    <h1 class="[ heading heading--large winner__mainheading ]">Congratulations! <br>You rule the Iron Throne!</h1>
+    <img class="[ winner__wolf ]"id="wolf" src="images/ghost.png" alt="Ghost">
+    <img class="[ winner__raven ]"id="raven" src="images/raven.png" alt="Raven">
+    <img class="[ winner__pedestal ]"id="pedestal" src="images/pedestal.png" alt="Pedestal">
+    <a href="index.html" class="[  ][ btn btn__medium winner__button ]">Play Again</a> 
+</div>
+
+
+
+
+<!--UP AND DOWN ARROWS-->
+<div class="[ col-1 ][ arrow1 ]"  id="upArrow">  
+    <p class="[ text-center][ hvr-pulse ]" ><i id="arrowDisplay1" class="[ fa fa-caret-up ]"></i><br></p>
+</div> 
+<div class="[ col-1 ][ arrow2 ]" id="downArrow">  
+    <p class="[ text-center][ hvr-pulse ]" ><i id="arrowDisplay2" class="[ fa fa-caret-down ]"></i><br></p>
+</div>  
+
+
+
+
+<!---INFO---->
+    <div class="[ container col-12 ][ share__container ]">
+        <div class="[ row justify-content-center ]">
+            <div class="[ col-11 col-md-11 col-lg-7 col-xl-6 text-center ]">
+                <img class="[ img-fluid ]" alt="Picture of Game of Thrones animated characters" src="images/team.png" id="index-dragon-img">
+            </div> 
+
+            <div class="[ col-11 col-md-6 col-lg-4 col-xl-4 text-center ][ share__readmore ]">
+                <h3 class="[ heading heading--medium share__title ]">About the game</h3>
+                <p class="[ share__text ]">This game was made as a school project. All the illustrations and codes are made by Ada Elise Håberg. The game is coded with HTML, CSS and JavaScript. Hope you enjoyed the game.</p>
+                <h3 class="[ heading heading--medium share__title ]">Share with friends</h3>
+                <div class="share__social">
+                    <!--share on facebook, code made by fb development team-->
+                    <div id="fb-root"></div>
+                    <div class="[ fb-share-button ][ share__button--fb ]" data-href="http://geitermat.no/semesterproject2/index.html" data-layout="button" data-size="large" data-mobile-iframe="true">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgeitermat.no%2Fsemesterproject2%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Del</a>
+                    </div>
+                    <!--share on twitter, code made by twitter dev team-->
+                    <a class="[ twitter-share-button ][ share__button--twitter ]" data-size="large" href="https://twitter.com/intent/tweet">Tweet</a>
+                </div>
+                
+                <!--copy link and share-->
+                <div class="[ col-12 ][ share__copy ]">
+                    <input id="shareLink" class="[ share__copy--input ]" type="text" value="http://geitermat.no/semesterproject2/index.html">
+                    <button class="[ btn btn__small share__button ]" data-clipboard-action="copy" data-clipboard-target="#foo" onclick="copyLink()" onmouseout="getOut()"><span class="[ share__copy--tooltip-text ]" id="myTooltip">Copy to clipboard</span>Copy Link</button>
+                </div>
+            </div>
+
+            <div class="[ col-0 col-lg-1 col-xl-1 ][  ]">
+                <p class="[ ]"></p>
+            </div>
+
+        </div>
+    </div>
+<!---/INFO--->   
+    
+<!---FOOTER--->
+    <footer>
+        <div class="[ footer ]">
+            <div class="[ container ]">
+                <div class="[ row justify-content-center ]">
+                    <div class="[ col-md-6 text-center ]">
+                        <p id="copyright" class="[ footer__text ]"></p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+<!--/FOOTER-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="scripts/winner.js"></script>
+<script src="scripts/menu.js"></script>

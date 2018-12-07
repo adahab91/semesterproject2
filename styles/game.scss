@@ -3,40 +3,76 @@
 
 body {
     background-color: $black;
-   /*  background: url("../images/fantasy-3194227_1920.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
     min-width: 1366px ;
+    max-width: 1366px; 
+    @media screen and (max-width: 1367px ) {
+        min-width: 1100px;
+        max-width: 1100px;
+    } 
+}
+//adjusting some stuff to laptop
+.game{
+    &__navigation{
+        @media screen and (max-width: 1367px ) {
+            background-color: $light-black;
+        } 
+    }
+    &__logo{
+        @media screen and (max-width: 1367px ) {
+            display: none;
+        } 
+    }
+    &__togglericon{
+        @media screen and (max-width: 1367px ) {
+            background-color: transparent;
+        }
+    }
+}
+#startCabin{
+    width: 220px;
+    position: absolute;
+    top: 540px;
+    left: -160px;
+    @media screen and (max-width: 1367px ) {
+        top: 516px;
+    } 
 }
 
+#throne{
+    width: 150px;
+    position: absolute;
+    top: 30px;
+    left: 910px;
+    @media screen and (max-width: 1367px ) {
+        width: 150px;
+        position: absolute;
+        top: 30px;
+        left: 910px;
+    } 
+}
 .game-board{
     &__container{
         position: relative;
-        max-width: 1100px;
-        margin-top: 30px;
+        min-width: 1100px;
+        margin-top: 65px;
         background-color: $black;
         padding: 60px ;
         max-height: 800px;
+        margin-left: 34%;
         @media screen and (max-width: 1367px ) {
-             max-width: 100%;
-             padding: 0px ;
-        }
+            margin-left: 20%;
+            margin-top: 0px;
+            padding-top: 35px;
+            padding-bottom: 0;
+            max-height: 750px;
+        } 
     }
     &__row{
-        //text-align: center;
         padding: 0;
         max-width: 842px;
         min-width: 842px;
         margin-left: auto;
         margin-right: auto;
-        @media screen and (max-width: 1367px ) {
-            max-width: 600px;
-            min-width: 600px;
-            margin-left: 200px;
-            margin-right: 0;
-        }
     }
 }
 
@@ -44,12 +80,12 @@ body {
 .shout-out{
     position: absolute;
     z-index: 3;
-    animation-duration: 1s;
-    animation-name: slidedown;
-    animation-iteration-count: 1;
-    width: 1000px;
+    width: 985px;
     display: block;
     border: 5px outset $grey-blue;
+    @media screen and (max-width: 1367px ) {
+        width: 850px;
+    } 
     &__text{
         margin-top: 250px;
         margin-left: 20%;
@@ -60,32 +96,42 @@ body {
         padding: 15px;
         text-align: center;
         &--good{
-            color: white;
-            background-color: rgba(94,129,141,.7);
+            color: $white;
+            background-color: rgba(43,94,28,.8);
+            border: 5px outset $green;
         }
         &--bad{
-            color: white;
-            background-color: rgba(115,10,0,.7);
+            color: $white;
+            background-color: rgba(92, 10, 3,.8);
+            border: 5px outset $red;
+        }
+        &--superGood{
+            //margin-top: 150px;
+            //padding: 50px;
+            color: $orange;
+            background-color: $light-black;
+            -webkit-animation-name: tada;
+            animation-name: tada;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
         }
     }
 }
-
 
 .tile{
     min-width: 140px;
     max-width: 140px;
     min-height: 140px;
-    @media screen and (max-width: 1367px ) {
-        min-width: 100px;
-        max-width: 100px;
-        min-height: 100px;      
-    }
     &__number{
         font-family: $headings;
+        font-weight: 700;
     }
 }
 .even {
     background-color: $light-blue;
+    //border: 5px outset $grey-blue;
 }
 
 .player{
@@ -132,8 +178,11 @@ body {
         position: absolute;
         bottom: 140px;
         left: 30px;
-        animation: shake2 0.5s; 
+        animation: diceshake 0.5s; 
         animation-iteration-count: 2; 
+        @media screen and (max-width: 1367px ) {
+            left: 70px;
+        } 
     }
     &__roll-again{
         position: absolute;
@@ -157,79 +206,297 @@ body {
             height: 40px;
         }
     }
-
+    &__click-here{
+        position: absolute;
+        bottom: 100px;
+        left: 80px;
+        font-size: 3.5em;
+        animation: bumpinghand 1s infinite alternate;
+        color: $white;
+        display: block;
+        @media screen and (max-width: 1367px ) {
+            left: 120px;
+        } 
+    }
     &__button{
         position: absolute;
         bottom: 0px;
+        @media screen and (max-width: 1367px ) {
+            left: 60px;
+        } 
         &--inactive{
             background-color: $black;
             border: 5px outset $grey-blue;
             cursor: context-menu!important;
+            &:hover{
+                border: 5px outset $grey-blue;
+                background-color: $black;
+            }
         }
     }
 }
 
-
-//slide down shout out
-
-@keyframes slidedown {
-  from {
-    top: -40px;
-  }
-
-  to {
-    top: 30px;
-  }
+//add animation to pointing hand when game starts
+@keyframes bumpinghand {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-30px); }
 }
 
-//token shake
-@keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
 
-//token shake
+//token shake basic
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+//token shake six x1
 @keyframes shake1 {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+//token shake six x2
+@keyframes shake2 {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+//token shake six x3
+@keyframes shake3 {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 
 
 //dice shake
-@keyframes shake2 {
-            0% { transform: translate(2px, 2px) rotate(0deg); }
-            10% { transform: translate(-2px, -3px) rotate(-5deg); }
-            20% { transform: translate(-4px, 1px) rotate(5deg); }
-            30% { transform: translate(4px, 3px) rotate(0deg); }
-            40% { transform: translate(2px, -2px) rotate(5deg); }
-            50% { transform: translate(-2px, 3px) rotate(-5deg); }
-            60% { transform: translate(-4px, 2px) rotate(0deg); }
-            70% { transform: translate(4px, 0px) rotate(-5deg); }
-            80% { transform: translate(-2px, -3px) rotate(5deg); }
-            90% { transform: translate(2px, 3px) rotate(0deg); }
-            100% { transform: translate(2px, -3px) rotate(-5deg); }
-        }
+@keyframes diceshake {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
 
-
+//spin when dragen gets you
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(359deg);}
 }
+
+//horse
+@keyframes horse {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//forest
+@keyframes forest {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//raven
+@keyframes raven {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//?
+@keyframes randomnr {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//?
+@keyframes wolf {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//sword
+@keyframes sword {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//angry knights
+@keyframes knight {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+//fight
+@keyframes fight {
+    0% { transform: translate(2px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-5deg); }
+    20% { transform: translate(-4px, 1px) rotate(5deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(5deg); }
+    50% { transform: translate(-2px, 3px) rotate(-5deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 0px) rotate(-5deg); }
+    80% { transform: translate(-2px, -3px) rotate(5deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-5deg); }
+}
+
+
+//TADAaaaaaaa when won game, source "https://www.theappguruz.com/tag-tools/web/CSSAnimations/"
+
+  @-webkit-keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    }
+    @keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+  } 
+
+  //style dragons on winning poppup
+
+  .fa-dragon{
+      color: $white;
+      font-size: .8em;
+  }

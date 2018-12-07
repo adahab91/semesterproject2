@@ -2,16 +2,15 @@
 
 
 
-//TILE   4   HORSE
+//TILE   4   FIND HORSE
 #trap1{
     background: url("../images/horsetile.jpg") center ;
     background-size: contain;
     border: 5px outset $grey-blue;
 }
 #endTrap1{
-    background: url("../images/horsetile.jpg") center ;
+    background: url("../images/horsetile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
@@ -25,36 +24,35 @@
     border: 5px outset $grey-blue;
 }
 #endTrap2{
-    background: url("../images/creepyforesttile.jpg") center ;
+    background: url("../images/creepyforesttile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
 
-//TILE  10
+//TILE  10 RAVEN DISTRACTION
 #trap3{
     background: url("../images/raventile.jpg") center ;
     background-size: contain;
     border: 5px outset $grey-blue;
 }
 #endTrap3{
-    background: url("../images/raventile.jpg") center ;
+    background: url("../images/raventile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
-//TILE  13
+//TILE  13 RANDOM BACK
 #trap4{
-    background: url("../images/questiontile.jpg") center ;
-    background-size: contain;
+    background: url("../images/question.png") center ;
+    background-repeat: no-repeat;
+    background-size: 50px;
     border: 5px outset $grey-blue;
 }
 
 
 
-//TILE  15
+//TILE  15 GHOST HELPS
 #trap5{
     background: url("../images/ghosttile.jpg") center ;
     background-size: contain;
@@ -62,13 +60,12 @@
 }
 
 #endTrap5{
-    background: url("../images/ghosttile.jpg") center ;
+    background: url("../images/ghosttile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
-//TILE  23
+//TILE  23 FIND SWORD
 #trap6{
     background: url("../images/swordtile.jpg") center ;
     background-size: contain;
@@ -76,22 +73,20 @@
 }
 
 #endTrap6{
-    background: url("../images/swordtile.jpg") center ;
+    background: url("../images/swordtile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
-//TILE  25
+//TILE  25 ANGRY KNIGHTS
 #trap7{
     background: url("../images/knighttile.jpg") center ;
     background-size: contain;
     border: 5px outset $grey-blue;
 }
 #endTrap7{
-    background: url("../images/knighttile.jpg") center ;
+    background: url("../images/knighttile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
@@ -102,9 +97,8 @@
     border: 5px outset $grey-blue;
 }
 #endTrap8{
-    background: url("../images/flyingdragontile.jpg") center ;
+    background: url("../images/flyingdragontile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }
 
 
@@ -116,7 +110,6 @@
 }
 
 #endTrap9{
-    background: url("../images/dragonfighttile.jpg") center ;
+    background: url("../images/dragonfighttile2.png") center ;
     background-size: contain;
-    opacity: .1;
 }

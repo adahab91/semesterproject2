@@ -8,6 +8,23 @@
   text-transform: uppercase;
   opacity: 0.5;
 }
+@media screen and (max-width: 1367px) {
+  .heading--large {
+    font-size: 2.3em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .heading--large {
+    font-size: 2.1em;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .heading--large {
+    font-size: 1.8em;
+    padding-left: 25px;
+  }
+}
 .heading--medium {
   color: #F3F3F3;
   font-size: 2.3em;
@@ -30,13 +47,27 @@ p {
 
 .logo--small {
   width: 350px;
+  padding-top: 10px;
 }
-.logo--large {
-  min-width: 200px;
-  margin-bottom: 50px;
+@media screen and (max-width: 992px) {
+  .logo--small {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo--small {
+    width: 200px;
+    padding-left: 10px;
+    padding-top: 15px;
+  }
 }
 .logo--navigation {
   margin-left: 30px;
+}
+@media screen and (max-width: 400px) {
+  .logo--navigation {
+    margin-left: 10px;
+  }
 }
 
 .icon {
@@ -61,7 +92,22 @@ p {
   text-transform: uppercase;
   font-weight: bold;
 }
+.btn:hover {
+  border: 5px inset #400101;
+  background-color: #5c0a03;
+}
+.btn__small {
+  width: 120px;
+  padding: 5px 0px;
+  margin-left: 5px;
+  font-size: 0.8em;
+  font-family: "Philosopher", sans-serif;
+  border: 5px outset #400101;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
 .btn__medium {
+  z-index: 1;
   width: 170px;
   padding: 7px 5px;
   margin-left: 5px;
@@ -71,6 +117,12 @@ p {
   letter-spacing: 3px;
   font-weight: 700;
 }
+@media screen and (max-width: 1367px) {
+  .btn__medium {
+    width: 150px;
+    font-size: 1.3em;
+  }
+}
 .btn__large {
   padding: 15px;
   width: 230px;
@@ -78,6 +130,10 @@ p {
   font-family: "Open Sans", sans-serif;
   border: 5px outset #400101;
   letter-spacing: 3px;
+}
+.btn__large:hover {
+  border: 5px inset #400101;
+  background-color: #5c0a03;
 }
 .btn__nav {
   padding: 0;

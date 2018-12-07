@@ -6,9 +6,8 @@
 }
 
 #endTrap1 {
-  background: url("../images/horsetile.jpg") center;
+  background: url("../images/horsetile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap2 {
@@ -18,9 +17,8 @@
 }
 
 #endTrap2 {
-  background: url("../images/creepyforesttile.jpg") center;
+  background: url("../images/creepyforesttile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap3 {
@@ -30,14 +28,14 @@
 }
 
 #endTrap3 {
-  background: url("../images/raventile.jpg") center;
+  background: url("../images/raventile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap4 {
-  background: url("../images/questiontile.jpg") center;
-  background-size: contain;
+  background: url("../images/question.png") center;
+  background-repeat: no-repeat;
+  background-size: 50px;
   border: 5px outset #303A40;
 }
 
@@ -48,9 +46,8 @@
 }
 
 #endTrap5 {
-  background: url("../images/ghosttile.jpg") center;
+  background: url("../images/ghosttile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap6 {
@@ -60,9 +57,8 @@
 }
 
 #endTrap6 {
-  background: url("../images/swordtile.jpg") center;
+  background: url("../images/swordtile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap7 {
@@ -72,9 +68,8 @@
 }
 
 #endTrap7 {
-  background: url("../images/knighttile.jpg") center;
+  background: url("../images/knighttile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap8 {
@@ -84,9 +79,8 @@
 }
 
 #endTrap8 {
-  background: url("../images/flyingdragontile.jpg") center;
+  background: url("../images/flyingdragontile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 #trap9 {
@@ -96,9 +90,8 @@
 }
 
 #endTrap9 {
-  background: url("../images/dragonfighttile.jpg") center;
+  background: url("../images/dragonfighttile2.png") center;
   background-size: contain;
-  opacity: 0.1;
 }
 
 /*# sourceMappingURL=traptiles.css.map */

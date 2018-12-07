@@ -19,7 +19,7 @@ function Tile(number, oddEven, trap){
 
 //Display playertokens
 function displayTokens(){
-    var token = '<img class="[ player__token--'+this.name+' ]" id="'+this.id+'" data-number="'+ this.number +'" src="images/'+ this.name +"Token" +'.png">';
+    var token = '<img class="[ player__token--'+this.name+' ]" id="'+this.id+'" data-name="'+ this.name +'" data-number="'+ this.number +'" src="images/'+ this.name +"Token" +'.png">';
     document.getElementById('playerToken').innerHTML += token;
 }
 
@@ -45,11 +45,12 @@ function isEven(n) {
    return n % 2 == 0;
 }
 
-//create slide in text when character lands on trap
+//create slide in text when character lands on trap or wins
 function slideInText(aString, badOrGood){
     var newSlideIn ='<h1 id="shoutOut" class="[ shout-out shout-out__text shout-out__text--'+ badOrGood +' ]">'+ aString +'</h1>'
     document.getElementById('slideInText').innerHTML += newSlideIn;
 }
+
 
 //DICE
 var countClicksOnButton = 0;
@@ -62,12 +63,21 @@ function displayCanvas(){
     document.getElementById('diceContainer').innerHTML += newCanvas;
 }
 
+//relocate winner to new page
+function relocateWinner(){
+    setTimeout(function(){
+        location.href = "winner.html";
+    }, 6000)
+}
+
 //ONCLICK FUNCTION
 function rollDice(){
     //Get random number
     const max = 6;
     var roll = Math.ceil(Math.random()* max);
     console.log("your rolled " + roll);
+
+    document.getElementById("pushHere").style.display = "none";
 
     //crate active token function setup
     function activeToken(tokenNr, tokenNrId, tokenNrId2){
@@ -87,6 +97,10 @@ function rollDice(){
             //add message to trow again
             document.getElementById('rollAgain').style.display = "block";
             document.getElementById('rollAgain2').style.display = "block";
+            if(tokenNrId.dataset.number >= 31){
+                document.getElementById('rollAgain').style.display = "none";
+                document.getElementById('rollAgain2').style.display = "none";
+            }
 
         } else{
             //count number of clicks on button to decide wich turn it is
@@ -115,8 +129,8 @@ function rollDice(){
             function delayMoveTrapTile4(){
                 setTimeout(function(){
                     //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 0.5s";
-                    tokenNrId.style.animationIterationCount = "5";
+                    tokenNrId.style.animation = "horse 1s";
+                    tokenNrId.style.animationIterationCount = "3";
 
                     tokenNrId.dataset.number = "17";
                     tokenNr.number = 17;
@@ -132,13 +146,13 @@ function rollDice(){
         case 7: //TRAP NR 2
             diceButton.style.display = "none";
             //add message     
-            slideInText("You got lost in Wolfswood.. <br> you walked the wrong way back to 2", "bad");
+            slideInText("You got lost in Wolfswood.. <br> You walked the wrong way back to 2", "bad");
             
             function delayMoveTrapTile7(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 0.5s";
-                    tokenNrId.style.animationIterationCount = "5";
+                    //animate active token
+                    tokenNrId.style.animation = "forest 0.5s";
+                    tokenNrId.style.animationIterationCount = "6";
 
                     tokenNrId.dataset.number = "2";
                     tokenNr.number = 2;
@@ -157,13 +171,16 @@ function rollDice(){
             
             function delayMoveTrapTile10(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 0.5s";
+                    //animate active token
+                    tokenNrId.style.animation = "raven 0.5s";
                     tokenNrId.style.animationIterationCount = "5";
+
                     tokenNrId.dataset.number = "3";
                     tokenNr.number = 3;
                     console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
+
                     diceButton.style.display = "block";
+
                     document.getElementById('slideInText').innerHTML = "";
                 }, 4000)
             }
@@ -178,8 +195,8 @@ function rollDice(){
             
             function delayMoveTrapTile13(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 0.5s";
+                    //animate active token
+                    tokenNrId.style.animation = "randomnr 0.5s";
                     tokenNrId.style.animationIterationCount = "5";
 
                     tokenNrId.dataset.number = tokenNr.number - roll;
@@ -199,7 +216,7 @@ function rollDice(){
             function delayMoveTrapTile15(){
                 setTimeout(function(){
                     //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 2s";
+                    tokenNrId.style.animation = "wolf 3s";
                     tokenNrId.style.animationIterationCount = "1";
                     
                     tokenNrId.dataset.number = "22";
@@ -221,8 +238,8 @@ function rollDice(){
             function delayMoveTrapTile23(){
                 setTimeout(function(){
                     //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 0.2s";
-                    tokenNrId.style.animationIterationCount = "5";
+                    tokenNrId.style.animation = "sword 0.2s";
+                    tokenNrId.style.animationIterationCount = "10";
 
                     tokenNrId.dataset.number = "26";
                     tokenNr.number = 26;
@@ -244,8 +261,8 @@ function rollDice(){
             function delayMoveTrapTile25(){
                 setTimeout(function(){
                     //animate and style passive and active tokens
-                    tokenNrId.style.animation = "shake1 0.2s";
-                    tokenNrId.style.animationIterationCount = "5";
+                    tokenNrId.style.animation = "knight 0.2s";
+                    tokenNrId.style.animationIterationCount = "13";
 
                     tokenNrId.dataset.number = "21";
                     tokenNr.number = 21;
@@ -262,7 +279,7 @@ function rollDice(){
         case 29://TRAP NR 8
             diceButton.style.display = "none";
             //add message
-            slideInText("The dragon got you! <br> You was put down on 11!", "bad");
+            slideInText("The dragon got you! <br> You was thrown down on 11!", "bad");
 
             function delayMoveTrapTile29(){
                 setTimeout(function(){
@@ -290,8 +307,8 @@ function rollDice(){
             function delayMoveTrapTile30(){
                 setTimeout(function(){
                     //animate and style passive and active tokens
-                    tokenNrId.style.animation = "spin 0.5s";
-                    tokenNrId.style.animationIterationCount = "5";
+                    tokenNrId.style.animation = "fight 0.2s";
+                    tokenNrId.style.animationIterationCount = "13";
 
                     tokenNrId.dataset.number = "24";
                     tokenNr.number = 24;
@@ -486,12 +503,32 @@ function rollDice(){
             activePlayerTwo.style.transition = "all 2s";
             activePlayerOne.style.filter = "opacity(100%)";
             activePlayerOne.style.transition = "all 4s";
+            if(roll === 6){
+                //animate token again
+                playerOneId.style.animation = "shake2 0.5s";
+                playerOneId.style.animationIterationCount = "5";
+                if(roll === 6){
+                    //animate token the third time
+                    playerOneId.style.animation = "shake3 0.5s";
+                    playerOneId.style.animationIterationCount = "5";
+                }
+            }
+            
         } else{
             activePlayerOne.style.filter = "opacity(30%)";
             activePlayerOne.style.transition = "all 2s";
             activePlayerTwo.style.filter = "opacity(100%)";
             activePlayerTwo.style.transition = "all 4s";
         }
+        if(playerOneId.dataset.number >= 31){
+            document.getElementById('slideInText').style.opacity = "100%";
+            slideInText("<i class='fas fa-dragon'></i> WE GOT A WINNER! <i class='fas fa-dragon fa-flip-horizontal'></i>", "superGood");
+            document.getElementById("rollDice").style.display = "none"; 
+            document.getElementById("rollAgain").style.display = "none";
+            document.getElementById("rollAgain2").style.display = "none";
+            localStorage.removeItem(localStorage.key(1));
+            relocateWinner();
+        }        
        
     } else {
         activeToken(playerTwo, playerTwoId, playerOneId);
@@ -504,17 +541,36 @@ function rollDice(){
             activePlayerOne.style.transition = "all 2s";
             activePlayerTwo.style.filter = "opacity(100%)";
             activePlayerTwo.style.transition = "all 4s";
+            if(roll === 6){
+                //animate token again
+                playerTwoId.style.animation = "shake2 0.5s";
+                playerTwoId.style.animationIterationCount = "5";
+                if(roll === 6){
+                    //animate token again
+                    playerTwoId.style.animation = "shake3 0.5s";
+                    playerTwoId.style.animationIterationCount = "5";
+                }
+            
+            }
         } else{
             activePlayerTwo.style.filter = "opacity(30%)";
             activePlayerTwo.style.transition = "all 2s";
             activePlayerOne.style.filter = "opacity(100%)";
             activePlayerOne.style.transition = "all 4s";
         }
-
+        if(playerTwoId.dataset.number >= 31){
+            document.getElementById('slideInText').style.opacity = "100%";
+            slideInText("<i class='fas fa-dragon'></i> WE GOT A WINNER! <i class='fas fa-dragon fa-flip-horizontal'></i>", "superGood");
+            document.getElementById("rollDice").style.display = "none"; 
+            document.getElementById("rollAgain").style.display = "none";
+            document.getElementById("rollAgain2").style.display = "none";
+            localStorage.removeItem(localStorage.key(0));
+            relocateWinner();
+        }
     }
 };
 
-//creating new tiles
+//CREATING NEW TILES
 var t1 = new Tile(1, "odd", "noTrap");
 var t2 = new Tile(2, "even", "endTrap2");
 var t3 = new Tile(3, "odd", "endTrap3");
@@ -576,19 +632,6 @@ t3.displayTile();
 t4.displayTile();
 t5.displayTile();
 t6.displayTile();
-
-
-//styling odd tiles
-function evenAndOdd(){
-    var setBackground = document.querySelectorAll(".odd");
-    
-    for (var y = 0; y < setBackground.length; y++){
-        setBackground[y].style.backgroundColor = "#303A40";
-        setBackground[y].style.color = "white";
-    }
-};
-evenAndOdd(); 
-
 
 
 //ADDING A SMALL DIV TO SHOW WHICH PLAYER THAT IS ACTIVE

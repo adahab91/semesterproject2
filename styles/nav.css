@@ -3,34 +3,104 @@
   background: transparent;
   padding: 0;
 }
+@media screen and (max-width: 450px) {
+  .navigation {
+    background-color: #141414;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navigation {
+    padding-top: 0px;
+  }
+}
 .navigation__button {
   position: absolute;
   right: 0px;
   top: 0px;
+  padding: 0;
+}
+@media screen and (max-width: 450px) {
+  .navigation__button {
+    /* right: 30px;
+    top: 0px; */
+  }
+}
+@media screen and (max-width: 400px) {
+  .navigation__button {
+    /* right: 60px;
+    top: 0px; */
+  }
 }
 .navigation__content {
   position: absolute;
   right: 0px;
   top: 100px;
+  padding: 20px;
+  background-color: #141414;
+  width: 110px;
+}
+@media screen and (max-width: 1367px) {
+  .navigation__content {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navigation__content {
+    top: 80px;
+    /* width: 70px; */
+  }
 }
 .navigation__toggler-icon {
   color: #F3F3F3;
   font-size: 2em;
   background-color: #141414;
-  width: 120px;
+  width: 110px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 1367px) {
+  .navigation__toggler-icon {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navigation__toggler-icon {
+    font-size: 1.3em;
+    width: 80px;
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navigation__toggler-icon {
+    font-size: 1.3em;
+    width: 80px;
+    padding-top: 25px;
+    padding-right: 30px;
+  }
+}
 .navigation__link {
   color: #F3F3F3;
-  margin-right: 0px;
+  margin-right: 18px;
   font-size: 2em;
-  background-color: #141414;
-  width: 120px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  margin-top: -20px;
-  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 1367px) {
+  .navigation__link {
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navigation__link {
+    background-color: #141414;
+    font-size: 1.3em;
+    width: 30px;
+    padding-top: 30px;
+    padding-right: 10px;
+  }
 }
 .navigation__spanlink :hover {
   color: #FFA500;

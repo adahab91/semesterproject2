@@ -4,14 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--Addmore metastuff-->
-    <!-- Bootstrap CSS -->
+    <meta name="author" content="Ada Elise Håberg">
+    <meta name="description" content="Chose two GoT characters and start the race to the iron throne!">
+    <meta name="keywords" content="game of thrones, got, board game, game, online, free, board, free online, play">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/char.css">
-    <title>Game of Boards!</title>
+    <title>GAME OF BOARDS - Choose your favorite GoT heroes and play online!</title>
 </head>
 <body onload="resetLocalStorage()">
 
@@ -21,7 +22,7 @@
 </audio>
 
 <nav class="[ navbar navbar-light fixed-top ][ navigation ]">
-    <a class="[ navbar-brand ]" href="#"><img class="[ logo--small logo--navigation ]" src="images/logo-white.png"> </a>
+    <img class="[ logo--small logo--navigation ]" src="images/logo-white.png">
     <div class="[ col-2 text-right ][ navigation__button ]">
         <button class="[ navbar-toggler ][ btn__nav ]" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="[ fas fa-cog ][ navigation__toggler-icon ]"></i>
@@ -36,9 +37,6 @@
             <li id="stop" class="[ nav-item ][ navigation__item ]" onclick="pauseMusic()">
                 <span class="[ navigation__spanlink ]"><i class="[ fas fa-volume-mute ][ navigation__link ]" ></i></span>
             </li> 
-            <li class="[ nav-item ][ navigation__item ]">
-                <span class="[ navigation__spanlink ]"><i class="[ fas fa-question ][ navigation__link ]"></i></span>
-            </li>
             <li class="[ nav-item ][ navigation__item ]" onclick="reloadPage()">
                 <span class="[ navigation__spanlink ]"><i class="[ fas fa-redo ][ navigation__link ]"></i></span>
             </li>
@@ -51,10 +49,10 @@
 
 
 
-<div class="[ container col-md-12 col-lg-10 col-xl-10 ][ char-selection__container ]">
+<div id="alert" class="[ container col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12 ][ char-selection__container ]">
     <h2 class="[ heading heading--large ]">Select two players</h2>
     <div class="[ row ][ page ]">
-        <div class="[ col-md-3 ][ char-selection__box ]">
+        <div class="[ col-xl-3 col-lg-3 col-md-12 col-sm-12 ][ char-selection__box ]">
             <div class="[ row ][ char-selection ]">
                 <div class="[ col-sm ][ char-selection__thumbnail selectOne ]" >
                     <img class="[ char-selection__image ]" data-name="Sansa Stark" src="images/sansa-thumbnail.png" alt="Sansa character" onclick="selectCharacter('sansa')" id="sansa">
@@ -89,7 +87,7 @@
                 </div>
             </div><!--row char-selection-->
         </div><!--col char-selection-->
-        <div class="[ col-md-9 align-items-end ][  ]">
+        <div class="[ col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 align-items-end ][ character__container ]">
             <div class="[ row ]" class="[ character ]">
                 <div id="showCharacter" class="[ row ][ character ]">
                     <div id="loading">
@@ -102,6 +100,8 @@
     </div><!--row whole page--> 
     <div class="[ bottom-nav ]">
         <a href="index.html" id="goToStart" class="[ btn btn__medium ]">Back</a>
+        <p id="chooseRight" class="[ choose__alert--text ]">Choose two players</p>
+        <i id="chooseRight2" class="[ fas fa-caret-down ][ choose__alert--arrow ]"></i>
         <p id="goToBoardGame" class="[ btn btn__medium ]">Select</p>
     </div>
 
@@ -116,5 +116,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="scripts/charselect.js"></script>
-<script src="scripts/nextcharbtn.js"></script>
+<script src="scripts/entergamebtn.js"></script>
 <script src="scripts/menu.js"></script>

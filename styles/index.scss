@@ -1,0 +1,81 @@
+
+//importing stuff
+@import "variables";
+
+
+.start{
+
+    text-align: center;
+    &__container{
+        margin-top: 17%;
+        /* @media screen and (max-width: 1367px ) {
+            margin-top: 40%;
+        } */
+        @media screen and (max-width: 992px ) {
+            margin-top: 25%;
+        }
+        @media screen and (max-width: 768px ) {
+           margin-top: 50%;
+        }
+        @media screen and (max-width: 450px ) {
+           margin-top: 60%;
+        }
+    }
+    &__logo{
+        @media screen and (max-width: 1367px ) {
+            width: 600px;
+        }
+        @media screen and (max-width: 992px ) {
+            width: 100%;
+            min-width: 300px;
+        }
+        @media screen and (max-width: 768px ) {
+           padding: 0 30px;
+        }
+        @media screen and (max-width: 450px ) {
+           
+        }
+    }
+    &__mainheading{
+        font-size: 2.1em;
+        @media screen and (max-width: 768px ) {
+            font-size: 1.9em;
+        }
+        @media screen and (max-width: 650px ) {
+            font-size: 1.5em;
+        }
+        @media screen and (max-width: 500px ) {
+            font-size: 1.3em;
+        }
+        @media screen and (max-width: 450px ) {
+            font-size: 1em;
+            text-align: center;
+            padding-left: 0;
+        }
+        @media screen and (max-width: 400px ) {
+            
+        }
+    }
+    &__body{
+        background-color: $black;
+    }
+    &__button{
+        padding: 15px;
+        width: 230px;
+        font-size: 1.3em;
+        letter-spacing: 3px;
+        @media screen and (max-width: 768px ) {
+            padding: 12px;
+            width: 200px;
+            font-size: 1em;
+        }
+        @media screen and (max-width: 450px ) {
+            padding: 10px;
+            width: 170px;
+        }
+        @media screen and (max-width: 400px ) {
+            
+        }
+    }
+    
+}

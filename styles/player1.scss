@@ -4,194 +4,304 @@
 
 #playerOne{
     position: absolute;
-    top: 630px;
-    left: -10px;
-    z-index: 1;
-
+    bottom: 45px;
+    left: -20px;
+    z-index: 2;
+    @media screen and (max-width: 1367px ) {
+        bottom: 20px;
+    }
 }
 
 #playerOne[data-number="1"]{
-    top: 630px;
+    bottom: 45px;
     left: 120px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 20px;
+    }
 }
 
 #playerOne[data-number="2"]{
-    top: 630px;
+    bottom: 45px;
     left: 260px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 20px;
+    }
 }
 
 #playerOne[data-number="3"]{
-    top: 630px;
+    bottom: 45px;
     left: 400px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 20px;
+    }
 }
 
 #playerOne[data-number="4"]{
-    top: 630px;
+    bottom: 45px;
     left: 540px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+         bottom: 20px;
+    }
 }
 #playerOne[data-number="5"]{
-    top: 630px;
+    bottom: 45px;
     left: 680px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 20px;
+    }
 }
 #playerOne[data-number="6"]{
-    top: 630px;
+    bottom: 45px;
     left: 820px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 20px;
+    }
 }
 #playerOne[data-number="7"]{
-    top: 490px;
+    bottom: 185px;
     left: 780px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 160px;
+    }
 }
 #playerOne[data-number="8"]{
-    top: 490px;
+    bottom: 185px;
     left: 640px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 160px;
+    }
 }
 #playerOne[data-number="9"]{
-    top: 490px;
+    bottom: 185px;
     left: 500px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 160px;
+    }
 }
 #playerOne[data-number="10"]{
-    top: 490px;
+    bottom: 185px;
     left: 360px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 160px;
+    }
 }
 #playerOne[data-number="11"]{
-    top: 490px;
+    bottom: 185px;
     left: 220px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 160px;
+    }
 }
 #playerOne[data-number="12"]{
-    top: 490px;
+    bottom: 185px;
     left: 80px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 160px;
+    }
 }
 #playerOne[data-number="13"]{
-    top: 350px;
+    bottom: 325px;
     left: 120px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 300px;
+    }
 }
 #playerOne[data-number="14"]{
-    top: 350px;
+    bottom: 325px;
     left: 260px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 300px;
+    }
 }
 #playerOne[data-number="15"]{
-    top: 350px;
+    bottom: 325px;
     left: 400px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 300px;
+    }
 }
 #playerOne[data-number="16"]{
-    top: 350px;
+    bottom: 325px;
     left: 540px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 300px;
+    }
 }
 #playerOne[data-number="17"]{
-    top: 350px;
+    bottom: 325px;
     left: 680px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 300px;
+    }
 }
 #playerOne[data-number="18"]{
-    top: 350px;
+    bottom: 325px;
     left: 820px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 300px;
+    }
 }
 #playerOne[data-number="19"]{
-    top: 210px;
+    bottom: 465px;
     left: 780px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 440px;
+    }
 }
 #playerOne[data-number="20"]{
-    top: 210px;
+    bottom: 465px;
     left: 640px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 440px;
+    }
 }
 #playerOne[data-number="21"]{
-    top: 210px;
+    bottom: 465px;
     left: 500px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 440px;
+    }
 }
 #playerOne[data-number="22"]{
-    top: 210px;
+    bottom: 465px;
     left: 360px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 440px;
+    }
 }
 #playerOne[data-number="23"]{
-    top: 210px;
+    bottom: 465px;
     left: 220px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 440px;
+    }
 }
 #playerOne[data-number="24"]{
-    top: 210px;
+    bottom: 465px;
     left: 80px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 440px;
+    }
 }
 #playerOne[data-number="25"]{
-    top: 70px;
+    bottom: 605px;
     left: 120px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="26"]{
-    top: 70px;
+    bottom: 605px;
     left: 260px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="27"]{
-    top: 70px;
+    bottom: 605px;
     left: 400px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="28"]{
-    top: 70px;
+    bottom: 605px;
     left: 540px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="29"]{
-    top: 70px;
+    bottom: 605px;
     left: 680px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="30"]{
-    top: 70px;
-    left: 820px;
+    bottom: 605px;
+    left: 780px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="31"]{
-    top: 70px;
-    left: 920px;
+    bottom: 605px;
+    left: 955px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="32"]{
-    top: 70px;
-    left: 920px;
+    bottom: 605px;
+    left: 955px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="33"]{
-    top: 70px;
-    left: 920px;
+    bottom: 605px;
+    left: 955px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="34"]{
-    top: 70px;
-    left: 920px;
+    bottom: 605px;
+    left: 955px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="35"]{
-    top: 70px;
-    left: 920px;
+    bottom: 605px;
+    left: 955px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 #playerOne[data-number="36"]{
-    top: 70px;
-    left: 920px;
+    bottom: 605px;
+    left: 955px;
     transition: all 3s;
+    @media screen and (max-width: 1367px ) {
+        bottom: 580px;
+    }
 }
 
 //token shake

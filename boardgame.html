@@ -1,34 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <meta name="author" content="Ada Elise Håberg">
+    <meta name="description" content="Who will win the race and who will rule the iron throne? Find out.">
+    <meta name="keywords" content="game of thrones, got, board game, game, online, free, board, free online, play">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/game.css">
-    <link rel="stylesheet" href="styles/player.css">
-    <title>Escape the dragons!</title>
+    <link rel="stylesheet" href="styles/player1.css">
+    <link rel="stylesheet" href="styles/player2.css">
+    <link rel="stylesheet" href="styles/activeplayers.css">
+    <link rel="stylesheet" href="styles/traptiles.css">
+    <title>GAME OF BOARDS - Win the race and rule the iron throne!</title>
 </head>
-<body>
-
+<div id="body">
+<div id="slideInText"></div>
 <audio id="myAudio" autoplay loop>
-  <source src="music/13. The Viper of Dorne.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
+  <source src="music/12. The Roads Aren't Safe.mp3" type="audio/mp3">
+  Your browser does not support the audio element. 
 </audio>
 
-<nav class="[ navbar navbar-light fixed-top ][ navigation ]">
-    <a class="[ navbar-brand ]" href="#"><img class="[ logo--small logo--navigation ]" src="images/logo-white.png"> </a>
-    <div class="[ col-2 text-right ][ navigation__button ]">
+<nav class="[ navbar navbar-light fixed-top ][ navigation game__navigation ]">
+    <img id="logo" class="[ logo--small logo--navigation game__logo ]" src="images/logo-white.png">
+    <div class="[ col-2 text-right ][ navigation__button ]" onclick="showLogo()">
         <button class="[ navbar-toggler ][ btn__nav ]" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="[ fas fa-cog ][ navigation__toggler-icon ]"></i>
+            <i class="[ fas fa-cog ][ navigation__toggler-icon game__togglericon ]"></i>
         </button>
     </div>
-
+ 
     <div class="[ col-2 collapse navbar-collapse ][ navigation__content ]" id="navbarSupportedContent">
         <ul class="[ navbar-nav text-right ][ navigation__itemholder ]">
             <li id="play" class="[ nav-item ][ navigation__item ]" onclick="playMusic()">
@@ -37,9 +40,6 @@
             <li id="stop" class="[ nav-item ][ navigation__item ]" onclick="pauseMusic()">
                 <span class="[ navigation__spanlink ]"><i class="[ fas fa-volume-mute ][ navigation__link ]" ></i></span>
             </li> 
-            <li class="[ nav-item ][ navigation__item ]">
-                <span class="[ navigation__spanlink ]"><i class="[ fas fa-question ][ navigation__link ]"></i></span>
-            </li>
             <li class="[ nav-item ][ navigation__item ]" onclick="reloadPage()">
                 <span class="[ navigation__spanlink ]"><i class="[ fas fa-redo ][ navigation__link ]"></i></span>
             </li>
@@ -51,19 +51,26 @@
 </nav>
 
 
-<div class="[ container col-md-12 col-lg-10 col-xl-10 ][ game-board__container ]">
-    <div class="[ row ]">
+<div id="container" class="[ container col-md-12 col-lg-10 col-xl-10 ][ game-board__container ]">
+    
+    <div id="row" class="[ row ]">
         <div class="[ col-10 ]">
             <div id="showTile" class="[ row  ][ game-board__row ]">
 
             </div><!--row tiles-->
         </div>
-        <div class="[ col-2 ][ dice__container ]">
-            <canvas id="canvas" width="200" height="200">Your browser does not support Canvas</canvas>
-            <p id="rollDice" class="[  ][ dice__button btn btn__medium ]" onclick="rollDice()">Roll Dice</p> 
+        <div id="diceContainer" class="[ col-2 ][ dice__container ]">
+            <p id="rollAgain" class="[ dice__roll-again ]">SIX! Roll again!</p>
+            <i id="rollAgain2" class="[ fas fa-caret-down ][ dice__roll-again--arrow ]"></i>
+            <i id="pushHere" class="[ fas fa-hand-point-down ][ dice__click-here ]"></i>
+            <p class="[  ][ btn btn__medium btn__medium dice__button dice__button--inactive ]">Roll Dice</p> 
+            <p id="rollDice" class="[  ][ btn btn__medium dice__button ]" onclick="rollDice()">Roll Dice</p> 
         </div>
     </div>
     <div id="playerToken"></div>
+    <div id="activePlayer"></div>
+    <img id="startCabin" src="images/startcabin.png" alt="Start Cabin">
+    <img id="throne" src="images/throne.png" alt="Iron Throne">
     
 </div><!--container whole page-->
 
@@ -73,3 +80,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="scripts/game.js"></script>
+<script src="scripts/game-other.js"></script>
+<script src="scripts/menu.js"></script>
