@@ -1,6 +1,3 @@
-//SETTING THINGS UP
-
-//display tiles
 function displayTile(){
     var tile ='<div id="' + this.trap + '" class="[ col-sm ][ tile ' + this.oddEven +  ' ]" data-tilenumber="' + this.number + '">' +
     '<p class="[ tile__number ]">' + this.number + '</p>' +
@@ -17,7 +14,10 @@ function Tile(number, oddEven, trap){
 }
 
 
-//Display playertokens
+
+
+
+
 function displayTokens(){
     var token = '<img class="[ player__token--'+this.name+' ]" id="'+this.id+'" data-name="'+ this.name +'" data-number="'+ this.number +'" src="images/'+ this.name +"Token" +'.png">';
     document.getElementById('playerToken').innerHTML += token;
@@ -40,63 +40,62 @@ playerTwo.displayTokens();
 console.log(playerOne);
 console.log(playerTwo);
 
-//Check if number is even
+
+
+
+
+
+
 function isEven(n) {
    return n % 2 == 0;
 }
 
-//create slide in text when character lands on trap or wins
 function slideInText(aString, badOrGood){
     var newSlideIn ='<h1 id="shoutOut" class="[ shout-out shout-out__text shout-out__text--'+ badOrGood +' ]">'+ aString +'</h1>'
     document.getElementById('slideInText').innerHTML += newSlideIn;
 }
 
-
-//DICE
-var countClicksOnButton = 0;
-var playerOneId = document.getElementById("playerOne");
-var playerTwoId = document.getElementById("playerTwo");
-
-//create shaking canvas/dice
 function displayCanvas(){
     var newCanvas ='<canvas class="[ dice__canvas ]" id="canvas" width="140" height="140">Your browser does not support Canvas</canvas>'
     document.getElementById('diceContainer').innerHTML += newCanvas;
 }
 
-//relocate winner to new page
 function relocateWinner(){
     setTimeout(function(){
         location.href = "winner.html";
     }, 6000)
 }
 
+
+
+
+
+
 //ONCLICK FUNCTION
+var countClicksOnButton = 0;
+var playerOneId = document.getElementById("playerOne");
+var playerTwoId = document.getElementById("playerTwo");
+
 function rollDice(){
-    //Get random number
     const max = 6;
     var roll = Math.ceil(Math.random()* max);
     console.log("your rolled " + roll);
-
     document.getElementById("pushHere").style.display = "none";
 
     //crate active token function setup
     function activeToken(tokenNr, tokenNrId, tokenNrId2){
-        //create new number for token after dice roll
         tokenNr.number = tokenNr.number + roll;
         console.log(tokenNr.name + " new number = " + tokenNr.number);
-
-        //change dataset for character
         tokenNrId.dataset.number = tokenNr.number;
         console.log("datasetnr" + tokenNrId.dataset.number);
 
-        //if roll 6, roll again
         if(roll === 6){
             countClicksOnButton += 0;
             console.log("counts click button = " + countClicksOnButton);
-
             //add message to trow again
             document.getElementById('rollAgain').style.display = "block";
             document.getElementById('rollAgain2').style.display = "block";
+
             if(tokenNrId.dataset.number >= 31){
                 document.getElementById('rollAgain').style.display = "none";
                 document.getElementById('rollAgain2').style.display = "none";
@@ -106,7 +105,6 @@ function rollDice(){
             //count number of clicks on button to decide wich turn it is
             countClicksOnButton += 1;
             console.log("counts click button = " + countClicksOnButton);
-
             document.getElementById('rollAgain').style.display = "none";
             document.getElementById('rollAgain2').style.display = "none";
         }
@@ -119,83 +117,176 @@ function rollDice(){
         tokenNrId2.style.animation = "none";
         console.log(tokenNr.number);
 
+        function moveTokenLandingOnTrap (animString, durString, nrString, nr){
+            tokenNrId.style.animation = animString;
+            tokenNrId.style.animationIterationCount = durString;
+
+            tokenNrId.dataset.number = nrString;
+            tokenNr.number = nr;
+            console.log(tokenNr.name+" after trap = " + tokenNrId.dataset.number);
+            
+            
+            document.getElementById('slideInText').innerHTML = "";
+        }
+
+
         //add traps to different numbers
         var diceButton = document.getElementById("rollDice");
         switch (tokenNr.number) {
-        case 4: //TRAP NR 1
+        case 1:
             diceButton.style.display = "none";
-            //add message
-            slideInText("You found a horse! <br> Ride up to 17!", "good");
+            function delayButton1(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton1();
+        break;
+        case 2:
+            diceButton.style.display = "none";
+            function delayButton2(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton2();
+        break;
+        case 3:
+            diceButton.style.display = "none";
+            function delayButton3(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton3();
+        break;
+        case 4: //HORSE TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage1(){
+                setTimeout(function(){
+                    slideInText("You found a horse! <br> Ride up to 17!", "good");
+                }, 3000)
+            }
+            delayMessage1();
             function delayMoveTrapTile4(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "horse 1s";
-                    tokenNrId.style.animationIterationCount = "3";
-
-                    tokenNrId.dataset.number = "17";
-                    tokenNr.number = 17;
-                    console.log(tokenNr.name+" after trap = " + tokenNrId.dataset.number);
-                    
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("horse 1s", "3", "17", 17);
+                }, 6000)
             }
             delayMoveTrapTile4();
-            
+            function delayButton4(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton4();
         break;
-        case 7: //TRAP NR 2
+        case 5:
             diceButton.style.display = "none";
-            //add message     
-            slideInText("You got lost in Wolfswood.. <br> You walked the wrong way back to 2..", "bad");
-            
+            function delayButton5(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton5();
+        break;
+        case 6:
+            diceButton.style.display = "none";
+            function delayButton6(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton6();
+        break;
+        case 7: //WOLFSWOOD
+            diceButton.style.display = "none"; 
+            function delayMessage2(){
+                setTimeout(function(){
+                    slideInText("You got lost in Wolfswood.. <br> You walked the wrong way back to 2..", "bad");
+                }, 3000)
+            }
+            delayMessage2();
             function delayMoveTrapTile7(){
                 setTimeout(function(){
-                    //animate active token
-                    tokenNrId.style.animation = "forest 0.5s";
-                    tokenNrId.style.animationIterationCount = "6";
-
-                    tokenNrId.dataset.number = "2";
-                    tokenNr.number = 2;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("forest 0.5s", "6", "2", 2);
+                }, 6000)
             }
-            delayMoveTrapTile7();     
+            delayMoveTrapTile7();  
+            function delayButton7(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton7();   
         break;
-        case 10: //TRAP NR 3
+        case 8:
             diceButton.style.display = "none";
-            //add message
-            slideInText("You got distracted by the Three-Eyed Raven..<br> Walk back to 3..", "bad");
-            
+            function delayButton8(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton8();
+        break;
+        case 9:
+            diceButton.style.display = "none";
+            function delayButton9(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton9();
+        break;
+        case 10: //RAVEN TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage3(){
+                setTimeout(function(){
+                    slideInText("You got distracted by the Three-Eyed Raven..<br> Walk back to 3..", "bad");
+                }, 3000)
+            }
+            delayMessage3();
             function delayMoveTrapTile10(){
                 setTimeout(function(){
-                    //animate active token
-                    tokenNrId.style.animation = "raven 0.5s";
-                    tokenNrId.style.animationIterationCount = "5";
-
-                    tokenNrId.dataset.number = "3";
-                    tokenNr.number = 3;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("raven 0.5s", "5", "3", 3);
+                }, 6000)
             }
             delayMoveTrapTile10(); 
-            
-            
+            function delayButton3(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton3();
         break;
-        case 13: //TRAP NR 4
+        case 11:
             diceButton.style.display = "none";
-            //add message
-            slideInText("Walk back the amount on the dice..", "bad");
-            
+            function delayButton11(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton11();
+        break;
+        case 12:
+            diceButton.style.display = "none";
+            function delayButton12(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton12();
+        break;
+        case 13: //RANDOM BACK TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage4(){
+                setTimeout(function(){
+                    slideInText("Walk back the amount on the dice..", "bad");
+                }, 3000)
+            }
+            delayMessage4();
             function delayMoveTrapTile13(){
                 setTimeout(function(){
-                    //animate active token
                     tokenNrId.style.animation = "randomnr 0.5s";
                     tokenNrId.style.animationIterationCount = "5";
 
@@ -205,121 +296,230 @@ function rollDice(){
 
                     diceButton.style.display = "block";
                     document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                }, 6000)
             }
             delayMoveTrapTile13(); 
+            function delayButton4(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton4();
         break;
-        case 15: //TRAP NR 5
+        case 14:
             diceButton.style.display = "none";
-            //add message
-            slideInText("Ghost helped you clear the way! <br> Jump up to 22!", "good");
+            function delayButton14(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton14();
+        break;
+        case 15: //GHOST TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage5(){
+                setTimeout(function(){
+                    slideInText("Ghost helped you clear the way! <br> Jump up to 22!", "good");
+                }, 3000)
+            }
+            delayMessage5();
             function delayMoveTrapTile15(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "wolf 3s";
-                    tokenNrId.style.animationIterationCount = "1";
-                    
-                    tokenNrId.dataset.number = "22";
-                    tokenNr.number = 22;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("wolf 2s", "2", "22", 22);
+                }, 6000)
             }
             delayMoveTrapTile15(); 
-
+            function delayButton15(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton15();
         break;
-        case 23://TRAP NR 6
+        case 16:
             diceButton.style.display = "none";
-            //add message
-            slideInText("WOW! You found the Widow's Wail!! <br> You fought your way up to 26!", "good");
-
+            function delayButton16(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton16();
+        break;
+        case 17:
+            diceButton.style.display = "none";
+            function delayButton17(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton17();
+        break;
+        case 18:
+            diceButton.style.display = "none";
+            function delayButton18(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton18();
+        break;
+        case 19:
+            diceButton.style.display = "none";
+            function delayButton19(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton19();
+        break;
+        case 20:
+            diceButton.style.display = "none";
+            function delayButton20(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton20();
+        break;
+        case 21:
+            diceButton.style.display = "none";
+            function delayButton21(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton21();
+        break;
+        case 22:
+            diceButton.style.display = "none";
+            function delayButton22(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton22();
+        break;
+        case 23://WIDOWS WAIL TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage6(){
+                setTimeout(function(){
+                    slideInText("WOW! You found the Widow's Wail!! <br> You fought your way up to 26!", "good");
+                }, 3000)
+            }
+            delayMessage6();
             function delayMoveTrapTile23(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "sword 0.2s";
-                    tokenNrId.style.animationIterationCount = "10";
-
-                    tokenNrId.dataset.number = "26";
-                    tokenNr.number = 26;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("sword 0.2s", "10", "26", 26);
+                }, 6000)
             }
-
             delayMoveTrapTile23(); 
+            function delayButton6(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton6();
             
         break;
-        case 25://TRAP NR 7
+        case 24:
             diceButton.style.display = "none";
-            //add message
-            slideInText("You ran into a bunch of angry knights! <br> Run back to 21!", "bad");
-
+            function delayButton24(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton24();
+        break;
+        case 25://ANGRY KNIGHTS TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage7(){
+                setTimeout(function(){
+                    slideInText("You ran into a bunch of angry knights! <br> Run back to 21!", "bad");
+                }, 3000)
+            }
+            delayMessage7();
             function delayMoveTrapTile25(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "knight 0.2s";
-                    tokenNrId.style.animationIterationCount = "13";
-
-                    tokenNrId.dataset.number = "21";
-                    tokenNr.number = 21;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("knight 0.2s", "13", "21", 21);
+                }, 6000)
             }
-
             delayMoveTrapTile25(); 
+            function delayButton7(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton7();
             
         break;
-        case 29://TRAP NR 8
+        case 26:
             diceButton.style.display = "none";
-            //add message
-            slideInText("The dragon got you! <br> You was thrown down on 11!", "bad");
-
+            function delayButton26(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton26();
+        break;
+        case 27:
+            diceButton.style.display = "none";
+            function delayButton27(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton27();
+        break;
+        case 28:
+            diceButton.style.display = "none";
+            function delayButton28(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 3000)
+            }
+            delayButton28();
+        break;
+        case 29://DRAGON GOT YOU TRAP TILE
+            diceButton.style.display = "none";
+            function delayMessage8(){
+                setTimeout(function(){
+                    slideInText("The dragon got you! <br> You was thrown down on 11!", "bad");
+                }, 3000)
+            }
+            delayMessage8();
             function delayMoveTrapTile29(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "spin 0.5s";
-                    tokenNrId.style.animationIterationCount = "5";
-            
-                    tokenNrId.dataset.number = "11";
-                    tokenNr.number = 11;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("spin 0.5s", "5", "11", 11);
+                }, 6000)
             }
-
             delayMoveTrapTile29(); 
-            
+            function delayButton8(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton8();
         break;
-        case 30://TRAP NUMBER 9
+        case 30://DRAGON FIGHT TRAP TILE 
             diceButton.style.display = "none";
-            //add message
-            slideInText("A dragon fight! <br> Search coverage on 24!", "bad");
-
+            function delayMessage9(){
+                setTimeout(function(){
+                    slideInText("A dragon fight! <br> Search coverage on 24!", "bad");
+                }, 3000)
+            }
+            delayMessage9();
             function delayMoveTrapTile30(){
                 setTimeout(function(){
-                    //animate and style passive and active tokens
-                    tokenNrId.style.animation = "fight 0.2s";
-                    tokenNrId.style.animationIterationCount = "13";
-
-                    tokenNrId.dataset.number = "24";
-                    tokenNr.number = 24;
-                    console.log("newTokenNR after trap = " + tokenNrId.dataset.number);
-
-                    diceButton.style.display = "block";
-                    document.getElementById('slideInText').innerHTML = "";
-                }, 4000)
+                    moveTokenLandingOnTrap("fight 0.2s", "13", "24", 24);
+                }, 6000)
             }
-
             delayMoveTrapTile30();
+            function delayButton9(){
+                setTimeout(function(){
+                    diceButton.style.display = "block";
+                }, 9000)
+            }
+            delayButton9();
             
         break;
         default: 
@@ -636,7 +836,6 @@ t6.displayTile();
 
 //ADDING A SMALL DIV TO SHOW WHICH PLAYER THAT IS ACTIVE
 
-//show which is the active player
 function showActivePlayer(){
     var activePlayer = '<img class="[ player__token--head ]" id="activePlayerOne" src="images/'+ playerOne.name +"Head" +'.png">';
     document.getElementById('activePlayer').innerHTML += activePlayer;

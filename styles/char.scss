@@ -5,10 +5,6 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* @media screen and (max-width: 450px ) {
-        background: none;
-        background-color: $black;
-    } */
 }
 #loading{
     text-align: center; 
@@ -99,6 +95,7 @@ body{
         margin: 5px;
         &:hover{
             cursor: pointer;
+            border: 5px inset $grey-blue;
         }
         @media screen and (max-width: 1367px ) {
             width: 75px;
@@ -176,7 +173,6 @@ body{
         }
     }
     &__info{
-        //align-content: center;
         background-color: transparent;
         @media screen and (max-width: 450px ) {
             flex: 60%;

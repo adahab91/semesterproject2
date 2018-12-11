@@ -72,6 +72,7 @@
   width: 230px;
   font-size: 1.3em;
   letter-spacing: 3px;
+  font-family: "Philosopher", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .start__button {

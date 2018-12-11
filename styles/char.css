@@ -5,10 +5,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* @media screen and (max-width: 450px ) {
-      background: none;
-      background-color: $black;
-  } */
 }
 
 #loading {
@@ -122,6 +118,7 @@ body {
 }
 .char-selection__image:hover {
   cursor: pointer;
+  border: 5px inset #303A40;
 }
 @media screen and (max-width: 1367px) {
   .char-selection__image {

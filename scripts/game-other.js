@@ -23,7 +23,6 @@ function evenAndOdd(){
     for (var y = 0; y < setBackground.length; y++){
         setBackground[y].style.backgroundColor = "#303A40";
         setBackground[y].style.color = "#F3F3F3";
-        //setBackground[y].style.border = "5px outset #303A40";
     }
 };
 evenAndOdd(); 

@@ -13,8 +13,6 @@ var twoPlayers = false;
 var goToBoardGame = document.getElementById("goToBoardGame");
 goToBoardGame.addEventListener(
     "click",function(){
-
-
         for(var i =0; i < localStorage.length; i++){
             if (localStorage.length === 2){
                 twoPlayers = true;

@@ -10,31 +10,25 @@ var isMelisandre = false;
 var isSamwell = false;
 var isSandor = false;
 
-//RESET LOCAL STORAGE ONLOAD
+
 function resetLocalStorage(){
     localStorage.clear();
 };
 
-//ADDS VALUE TO LOCAL STORAGE
 function addValuesToLocalStorage(key, value){
     localStorage.setItem(key, value); 
 };
 
-//REMOVES VALUE TO LOCAL STORAGE
 function removeValueFromLocalStorage(key){
     localStorage.removeItem(key);  
 };
 
-
-
-
-//SELECT CHARACTER WITH SWITCH
-function selectCharacter(character){ //character is attribute for clickfunction on html
+function selectCharacter(character){ 
     document.getElementById('showCharacter').innerHTML = "";
     switch (character) {
         case 'sansa':
             if(isSansa){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isSansa = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerSansa");
@@ -47,7 +41,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
         case 'arya':
             if(isArya){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isArya = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerArya");
@@ -60,7 +54,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
         case 'tyrion':
             if(isTyrion){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isTyrion = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerTyrion");
@@ -73,7 +67,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
         case 'cersei':
             if(isCersei){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isCersei = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerCersei");
@@ -86,7 +80,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
         case 'varys':
             if(isVarys){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isVarys = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerVarys");
@@ -99,7 +93,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
         case 'daenerys':
             if(isDaenerys){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isDaenerys = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerDaenerys");
@@ -112,7 +106,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
         case 'jon':
             if(isJon){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isJon = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerJon");
@@ -125,7 +119,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
             case 'melisandre':
             if(isMelisandre){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isMelisandre = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerMelisandre");
@@ -138,7 +132,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
             case 'sandor':
             if(isSandor){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isSandor = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerSandor");
@@ -151,7 +145,7 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             break;
             case 'samwell':
             if(isSamwell){
-                document.getElementById(character).style.border = '5px outset #303A40';
+                document.getElementById(character).style.border = '';
                 isSamwell = false;
                 emptyCard();
                 removeValueFromLocalStorage("playerSamwell");
@@ -163,9 +157,10 @@ function selectCharacter(character){ //character is attribute for clickfunction 
             }
             break;
         default:
-            console.log('Sorry, there is a problem here  ');
+            console.log('Sorry, there is a problem here');
     }
 }
+
 function getData(Url,id) {
     fetch(Url)
         .then((response) => {
@@ -176,6 +171,7 @@ function getData(Url,id) {
             populateCardInfo(result, id);
         });
 }
+
 function populateCardInfo(result, id){
     document.getElementById(id).style.border = '5px inset orange';
     var displayChar ='<div class="[ col-sm-6 ][ character__image--holder ]">' +
