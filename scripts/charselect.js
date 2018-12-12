@@ -9,7 +9,7 @@ var isJon = false;
 var isMelisandre = false;
 var isSamwell = false;
 var isSandor = false;
-
+var countCharacters = 0;
 
 function resetLocalStorage(){
     localStorage.clear();
@@ -23,173 +23,284 @@ function removeValueFromLocalStorage(key){
     localStorage.removeItem(key);  
 };
 
-function selectCharacter(character){ 
-    document.getElementById('showCharacter').innerHTML = "";
-    switch (character) {
-        case 'sansa':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isSansa){
-                document.getElementById(character).style.border = '';
-                isSansa = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerSansa");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isSansa = true;
-                getData('https://anapioficeandfire.com/api/characters/957',character);
-                addValuesToLocalStorage("playerSansa", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            break;
-        case 'arya':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isArya){
-                document.getElementById(character).style.border = '';
-                isArya = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerArya");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isArya = true;
-                getData('https://anapioficeandfire.com/api/characters/148',character);
-                addValuesToLocalStorage("playerArya", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            break;
-        case 'tyrion':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isTyrion){
-                document.getElementById(character).style.border = '';
-                isTyrion = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerTyrion");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isTyrion = true;
-                getData('https://anapioficeandfire.com/api/characters/1052',character);
-                addValuesToLocalStorage("playerTyrion", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            break;
-        case 'cersei':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isCersei){
-                document.getElementById(character).style.border = '';
-                isCersei = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerCersei");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isCersei = true;
-                getData('https://anapioficeandfire.com/api/characters/238',character);
-                addValuesToLocalStorage("playerCersei", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            break;
-        case 'varys':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isVarys){
-                document.getElementById(character).style.border = '';
-                isVarys = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerVarys");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isVarys = true;
-                getData('https://anapioficeandfire.com/api/characters/2069',character);
-                addValuesToLocalStorage("playerVarys", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            break;
-        case 'daenerys':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isDaenerys){
-                document.getElementById(character).style.border = '';
-                isDaenerys = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerDaenerys");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isDaenerys = true;
-                getData('https://anapioficeandfire.com/api/characters/271',character);
-                addValuesToLocalStorage("playerDaenerys", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            break;
-        case 'jon':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isJon){
-                document.getElementById(character).style.border = '';
-                isJon = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerJon");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isJon = true;
-                getData('https://anapioficeandfire.com/api/characters/583',character);
-                addValuesToLocalStorage("playerJon", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-        break;
-        case 'melisandre':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isMelisandre){
-                document.getElementById(character).style.border = '';
-                isMelisandre = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerMelisandre");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isMelisandre = true;
-                getData('https://anapioficeandfire.com/api/characters/743',character);
-                addValuesToLocalStorage("playerMelisandre", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-        break;
-        case 'sandor':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isSandor){
-                document.getElementById(character).style.border = '';
-                isSandor = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerSandor");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isSandor = true;
-                getData('https://anapioficeandfire.com/api/characters/955',character);
-                addValuesToLocalStorage("playerSandor", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-        break;
-        case 'samwell':
-        document.getElementById('overlayBeforeLoad').style.display = 'block';
-            if(isSamwell){
-                document.getElementById(character).style.border = '';
-                isSamwell = false;
-                emptyCard();
-                removeValueFromLocalStorage("playerSamwell");
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-            else{
-                isSamwell = true;
-                getData('https://anapioficeandfire.com/api/characters/954',character);
-                addValuesToLocalStorage("playerSamwell", character);
-                document.getElementById('overlayBeforeLoad').style.display = 'none';
-            }
-        break;
-        default:
-            console.log('Sorry, there is a problem here');
-    }
+function onLoadSetDelay() {
+    setTimeout(function(){ 
+        document.getElementById('overlayBeforeLoad').style.display = 'none';
+    }, 1500);
 }
+onLoadSetDelay();
+
+function onlyTwoChar(){
+    document.getElementById('onlyTwo').style.display = 'block';
+    setTimeout(function(){ 
+        document.getElementById('onlyTwo').style.display = 'none';
+    }, 1500);
+}
+
+function selectCharacter(character){ 
+        document.getElementById('showCharacter').innerHTML = "";
+        switch (character) {
+            case 'sansa':
+                if(isSansa){
+                    document.getElementById(character).style.border = '';
+                    isSansa = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerSansa");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters);
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isSansa = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerSansa");
+                        onlyTwoChar();
+                    } else {
+                        isSansa = true;
+                    getData('https://anapioficeandfire.com/api/characters/957',character);
+                    addValuesToLocalStorage("playerSansa", character);
+                    countCharacters = countCharacters + 1; 
+                    console.log(countCharacters);
+                    }
+                    
+                }
+                break;
+            case 'arya':
+             
+                if(isArya){
+                    document.getElementById(character).style.border = '';
+                    isArya = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerArya");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters);
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isArya = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerArya");
+                        onlyTwoChar();
+                    } else {
+                        isArya = true;
+                        getData('https://anapioficeandfire.com/api/characters/148',character);
+                        addValuesToLocalStorage("playerArya", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }
+                     
+                }
+                break;
+            case 'tyrion':
+             
+                if(isTyrion){
+                    document.getElementById(character).style.border = '';
+                    isTyrion = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerTyrion");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters);
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isTyrion = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerTyrion");
+                        onlyTwoChar();
+                    } else {
+                        isTyrion = true;
+                        getData('https://anapioficeandfire.com/api/characters/1052',character);
+                        addValuesToLocalStorage("playerTyrion", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }
+                }
+                break;
+            case 'cersei':
+             
+                if(isCersei){
+                    document.getElementById(character).style.border = '';
+                    isCersei = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerCersei");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters);
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isCersei = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerCersei");
+                        onlyTwoChar();
+                    } else {
+                        isCersei = true;
+                        getData('https://anapioficeandfire.com/api/characters/238',character);
+                        addValuesToLocalStorage("playerCersei", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }
+                }
+                break;
+            case 'varys':
+             
+                if(isVarys){
+                    document.getElementById(character).style.border = '';
+                    isVarys = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerVarys");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters); 
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isVarys = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerVarys");
+                        onlyTwoChar();
+                    } else {
+                        isVarys = true;
+                        getData('https://anapioficeandfire.com/api/characters/2069',character);
+                        addValuesToLocalStorage("playerVarys", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    } 
+                }
+                break;
+            case 'daenerys':
+                if(isDaenerys){
+                    document.getElementById(character).style.border = '';
+                    isDaenerys = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerDaenerys");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters); 
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isDaenerys = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerDaenerys");
+                        onlyTwoChar();
+                    } else {
+                        isDaenerys = true;
+                        getData('https://anapioficeandfire.com/api/characters/271',character);
+                        addValuesToLocalStorage("playerDaenerys", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }  
+                }
+                break;
+            case 'jon':
+                if(isJon){
+                    document.getElementById(character).style.border = '';
+                    isJon = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerJon");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters); 
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isJon = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerJon");
+                        onlyTwoChar();
+                    } else {
+                        isJon = true;
+                        getData('https://anapioficeandfire.com/api/characters/583',character);
+                        addValuesToLocalStorage("playerJon", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }   
+                }
+            break;
+            case 'melisandre':
+                if(isMelisandre){
+                    document.getElementById(character).style.border = '';
+                    isMelisandre = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerMelisandre");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters); 
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isMelisandre = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerMelisandre");
+                        onlyTwoChar();
+                    } else {
+                        isMelisandre = true;
+                        getData('https://anapioficeandfire.com/api/characters/743',character);
+                        addValuesToLocalStorage("playerMelisandre", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }   
+                }
+            break;
+            case 'sandor':
+                if(isSandor){
+                    document.getElementById(character).style.border = '';
+                    isSandor = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerSandor");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters); 
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isSandor = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerSandor");
+                        onlyTwoChar();
+                    } else {
+                        isSandor = true;
+                        getData('https://anapioficeandfire.com/api/characters/955',character);
+                        addValuesToLocalStorage("playerSandor", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    }   
+                }
+            break;
+            case 'samwell':
+                if(isSamwell){
+                    document.getElementById(character).style.border = '';
+                    isSamwell = false;
+                    emptyCard();
+                    removeValueFromLocalStorage("playerSamwell");
+                    countCharacters = countCharacters - 1; 
+                    console.log(countCharacters); 
+                }
+                else{
+                    if (countCharacters >= 2){
+                        document.getElementById(character).style.border = '';
+                        isSamwell = false;
+                        emptyCard();
+                        removeValueFromLocalStorage("playerSamwell");
+                        onlyTwoChar();
+                    } else {
+                        isSamwell = true;
+                        getData('https://anapioficeandfire.com/api/characters/954',character);
+                        addValuesToLocalStorage("playerSamwell", character);
+                        countCharacters = countCharacters + 1; 
+                        console.log(countCharacters);
+                    } 
+                }
+            break;
+            default:
+                console.log('Sorry, there is a problem here');
+        }
+}
+
 
 function getData(Url,id) {
     fetch(Url)
@@ -201,6 +312,7 @@ function getData(Url,id) {
             populateCardInfo(result, id);
         });
 }
+
 
 function populateCardInfo(result, id){
     document.getElementById(id).style.border = '5px inset orange';

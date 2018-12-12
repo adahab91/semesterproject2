@@ -22,14 +22,13 @@ body{
     }
 }
 
-
 #overlayBeforeLoad{
     width: 100%;
     height: 100%;
     background-color: rgba(14,14,14,.3);
     z-index: 5;
     top: 0px;
-    display: none;
+    display: block;
     position: absolute;
 }
 .display-content{
@@ -328,6 +327,9 @@ body{
         }
         @media screen and (max-width: 575px ) {
             bottom: 90px;
+            left: 200px;
+        }
+        @media screen and (max-width: 460px ) {
             left: 100px;
         }
         @media screen and (max-width: 400px ) {
@@ -360,6 +362,9 @@ body{
         }
         @media screen and (max-width: 575px ) {
             bottom: 120px;
+            left: 400px;
+        }
+        @media screen and (max-width: 460px ) {
             left: 300px;
         }
         @media screen and (max-width: 400px ) {
@@ -370,4 +375,37 @@ body{
             left: 200px;
         }
     }
+    &--selectTwo-text{
+        margin-top: 100%;
+        font-family: $button;
+        padding: 5px 5px 5px 10px;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        &:hover{
+            cursor: default;
+        }
+        @media screen and (max-width: 992px ) {
+            margin-top: 3%;
+        }
+        @media screen and (max-width: 575px ) {
+            margin-top: 8%;
+        }
+        @media screen and (max-width: 450px ) {
+            margin-top: 12%;
+        }
+    }
+}
+
+
+#onlyTwo{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(14,14,14,.8);
+    width: 100%;
+    height: 100%;
+    border: 5px outset $grey-blue;
 }

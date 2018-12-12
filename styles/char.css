@@ -33,7 +33,7 @@ body {
   background-color: rgba(14, 14, 14, 0.3);
   z-index: 5;
   top: 0px;
-  display: none;
+  display: block;
   position: absolute;
 }
 
@@ -410,6 +410,11 @@ body {
 @media screen and (max-width: 575px) {
   .choose__alert--text {
     bottom: 90px;
+    left: 200px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .choose__alert--text {
     left: 100px;
   }
 }
@@ -456,6 +461,11 @@ body {
 @media screen and (max-width: 575px) {
   .choose__alert--arrow {
     bottom: 120px;
+    left: 400px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .choose__alert--arrow {
     left: 300px;
   }
 }
@@ -469,6 +479,44 @@ body {
   .choose__alert--arrow {
     left: 200px;
   }
+}
+.choose__alert--selectTwo-text {
+  margin-top: 100%;
+  font-family: "Philosopher", sans-serif;
+  padding: 5px 5px 5px 10px;
+  color: #F3F3F3;
+  font-weight: 700;
+  text-align: center;
+}
+.choose__alert--selectTwo-text:hover {
+  cursor: default;
+}
+@media screen and (max-width: 992px) {
+  .choose__alert--selectTwo-text {
+    margin-top: 3%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .choose__alert--selectTwo-text {
+    margin-top: 8%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .choose__alert--selectTwo-text {
+    margin-top: 12%;
+  }
+}
+
+#onlyTwo {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(14, 14, 14, 0.8);
+  width: 100%;
+  height: 100%;
+  border: 5px outset #303A40;
 }
 
 /*# sourceMappingURL=char.css.map */

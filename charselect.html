@@ -44,12 +44,14 @@
     </div>
 </nav>
 
-
 <div id="overlayBeforeLoad"></div>
 <div id="alert" class="[ container col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12 ][ char-selection__container ]">
     <h2 class="[ heading heading--large char-selection__heading ]">Select two players</h2>
     <div class="[ row ][ page ]">
         <div class="[ col-xl-3 col-lg-3 col-md-12 col-sm-12 ][ char-selection__box ]">
+            <div id="onlyTwo">
+                <p class="[ choose__alert--selectTwo-text ]">Choose only two</p>
+            </div>
             <div class="[ row ][ char-selection ]">
                 <div class="[ col-sm ][ char-selection__thumbnail selectOne ]" >
                     <img class="[ char-selection__image ]" data-name="Sansa Stark" src="images/sansa-thumbnail.png" alt="Sansa character" onclick="selectCharacter('sansa')" id="sansa">
