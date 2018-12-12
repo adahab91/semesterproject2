@@ -5,7 +5,7 @@ body {
     background-color: $black;
     min-width: 1366px ;
     max-width: 1366px; 
-    @media screen and (max-width: 1367px ) {
+    @media screen and (max-width: 1440px ) {
         min-width: 1100px;
         max-width: 1100px;
     } 
@@ -13,17 +13,17 @@ body {
 //adjusting some stuff to laptop
 .game{
     &__navigation{
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             background-color: $light-black;
         } 
     }
     &__logo{
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             display: none;
         } 
     }
     &__togglericon{
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             background-color: transparent;
         }
     }
@@ -33,6 +33,9 @@ body {
     position: absolute;
     top: 540px;
     left: -160px;
+    @media screen and (max-width: 1440px ) {
+        top: 491px;
+    } 
     @media screen and (max-width: 1367px ) {
         top: 516px;
     } 
@@ -43,11 +46,11 @@ body {
     position: absolute;
     top: 30px;
     left: 910px;
+    @media screen and (max-width: 1440px ) {
+        top: 5px;
+    } 
     @media screen and (max-width: 1367px ) {
-        width: 150px;
-        position: absolute;
         top: 30px;
-        left: 910px;
     } 
 }
 .game-board{
@@ -59,12 +62,15 @@ body {
         padding: 60px ;
         max-height: 800px;
         margin-left: 34%;
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             margin-left: 20%;
             margin-top: 0px;
-            padding-top: 35px;
+            padding-top: 10px;
             padding-bottom: 0;
             max-height: 750px;
+        } 
+        @media screen and (max-width: 1367px ) {
+            padding-top: 35px;
         } 
     }
     &__row{
@@ -83,7 +89,7 @@ body {
     width: 1020px;
     display: block;
     border: 5px outset $grey-blue;
-    @media screen and (max-width: 1367px ) {
+    @media screen and (max-width: 1440px ) {
         width: 1020px;
         left: -30px;
     } 
@@ -107,8 +113,6 @@ body {
             border: 5px outset $red;
         }
         &--superGood{
-            //margin-top: 150px;
-            //padding: 50px;
             color: $orange;
             background-color: $light-black;
             -webkit-animation-name: tada;
@@ -132,7 +136,6 @@ body {
 }
 .even {
     background-color: $light-blue;
-    //border: 5px outset $grey-blue;
 }
 
 .player{
@@ -181,7 +184,7 @@ body {
         left: 30px;
         animation: diceshake 0.5s; 
         animation-iteration-count: 2; 
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             left: 70px;
         } 
     }
@@ -215,14 +218,14 @@ body {
         animation: bumpinghand 1s infinite alternate;
         color: $white;
         display: block;
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             left: 120px;
         } 
     }
     &__button{
         position: absolute;
         bottom: 0px;
-        @media screen and (max-width: 1367px ) {
+        @media screen and (max-width: 1440px ) {
             left: 60px;
         } 
         &--inactive{

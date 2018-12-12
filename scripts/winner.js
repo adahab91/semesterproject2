@@ -2,43 +2,43 @@
 function displayWinner (){
     switch (localStorage.key(0)) {
         case "playerSansa": 
-            var showSansa = '<img class="[ winner__char winner__char--sansa ]" src="images/Sansa Stark.png">';
+            let showSansa = '<img class="[ winner__char winner__char--sansa ]" src="images/Sansa Stark.png">';
             document.getElementById('winner').innerHTML += showSansa;
         break;
         case "playerSandor": 
-            var showSandor = '<img class="[ winner__char winner__char--sandor ]" src="images/Sandor Clegane.png">';
+            let showSandor = '<img class="[ winner__char winner__char--sandor ]" src="images/Sandor Clegane.png">';
             document.getElementById('winner').innerHTML += showSandor;
         break;
         case "playerSamwell": 
-            var showSamwell = '<img class="[ winner__char winner__char--samwell ]" src="images/Samwell Tarly.png">';
+            let showSamwell = '<img class="[ winner__char winner__char--samwell ]" src="images/Samwell Tarly.png">';
             document.getElementById('winner').innerHTML += showSamwell;
         break;
         case "playerVarys": 
-            var showVarys = '<img class="[ winner__char winner__char--varys ]" src="images/Varys.png">';
+            let showVarys = '<img class="[ winner__char winner__char--varys ]" src="images/Varys.png">';
             document.getElementById('winner').innerHTML += showVarys;
         break;
         case "playerJon": 
-            var showJon = '<img class="[ winner__char winner__char--jon ]" src="images/Jon Snow.png">';
+            let showJon = '<img class="[ winner__char winner__char--jon ]" src="images/Jon Snow.png">';
             document.getElementById('winner').innerHTML += showJon;
         break;
         case "playerMelisandre": 
-            var showMelisandre = '<img class="[ winner__char winner__char--melisandre ]" src="images/Melisandre.png">';
+            let showMelisandre = '<img class="[ winner__char winner__char--melisandre ]" src="images/Melisandre.png">';
             document.getElementById('winner').innerHTML += showMelisandre;
         break;
         case "playerCersei": 
-            var showCersei = '<img class="[ winner__char winner__char--cersei ]" src="images/Cersei Lannister.png">';
+            let showCersei = '<img class="[ winner__char winner__char--cersei ]" src="images/Cersei Lannister.png">';
             document.getElementById('winner').innerHTML += showCersei;
         break;
         case "playerArya": 
-            var showArya = '<img class="[ winner__char winner__char--arya ]" src="images/Arya Stark.png">';
+            let showArya = '<img class="[ winner__char winner__char--arya ]" src="images/Arya Stark.png">';
             document.getElementById('winner').innerHTML += showArya;
         break;
         case "playerDaenerys": 
-            var showDaenerys = '<img class="[ winner__char winner__char--daenerys ]" src="images/Daenerys Targaryen.png">';
+            let showDaenerys = '<img class="[ winner__char winner__char--daenerys ]" src="images/Daenerys Targaryen.png">';
             document.getElementById('winner').innerHTML += showDaenerys;
         break;
         case "playerTyrion": 
-            var showTyrion = '<img class="[ winner__char winner__char--tyrion ]" src="images/Tyrion Lannister.png">';
+            let showTyrion = '<img class="[ winner__char winner__char--tyrion ]" src="images/Tyrion Lannister.png">';
             document.getElementById('winner').innerHTML += showTyrion;
         break;
         default:
@@ -54,7 +54,7 @@ displayWinner();
 //UP AND DOWN ARROWS
 
 window.addEventListener("scroll",function(){
-    var arrowDisplay1 = document.getElementById("arrowDisplay1");
+    let arrowDisplay1 = document.getElementById("arrowDisplay1");
     if(this.scrollY < 10){
         arrowDisplay1.style.opacity = ".3";
         arrowDisplay1.style.color = "#2A3136";
@@ -66,8 +66,8 @@ window.addEventListener("scroll",function(){
 });
 
 window.addEventListener("scroll",function(){
-    var arrowDisplay2 = document.getElementById("arrowDisplay2");
-    var d = document,
+    let arrowDisplay2 = document.getElementById("arrowDisplay2");
+    let d = document,
         e = d.documentElement;
     if(e.scrollHeight - e.scrollTop === e.clientHeight){
         arrowDisplay2.style.opacity = ".3";
@@ -80,7 +80,7 @@ window.addEventListener("scroll",function(){
 });
 
 
-var upArrow = document.getElementById("upArrow");
+let upArrow = document.getElementById("upArrow");
 
 upArrow.addEventListener( "click",function(){
         window.scrollBy({ 
@@ -90,7 +90,7 @@ upArrow.addEventListener( "click",function(){
     });
 });
 
-var downArrow = document.getElementById("downArrow");
+let downArrow = document.getElementById("downArrow");
 
 downArrow.addEventListener( "click",function(){
         window.scrollBy({ 
@@ -105,15 +105,15 @@ downArrow.addEventListener( "click",function(){
 //COPY LINK
 
 function copyLink() {
-  var copyLink = document.getElementById("shareLink");
+  let copyLink = document.getElementById("shareLink");
   copyLink.select();
   document.execCommand("copy");
-  var tooltip = document.getElementById("myTooltip");
+  let tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copied Link ";
 }
 
 function getOut() {
-  var tooltip = document.getElementById("myTooltip");
+  let tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copy to clipboard";
 }
 
@@ -149,8 +149,8 @@ window.twttr = (function(d, s, id) {
 
 //copyright
 function updateCopyright(){
-    var d = new Date()
-    var footer = document.getElementById("copyright");
+    let d = new Date()
+    const footer = document.getElementById("copyright");
 
     footer.innerHTML += 'Copyright &copy; ' + d.getFullYear() + ' Ada Elise Håberg';
 };

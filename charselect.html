@@ -37,9 +37,6 @@
             <li id="stop" class="[ nav-item ][ navigation__item ]" onclick="pauseMusic()">
                 <span class="[ navigation__spanlink ]"><i class="[ fas fa-volume-mute ][ navigation__link ]" ></i></span>
             </li> 
-            <li class="[ nav-item ][ navigation__item ]" onclick="reloadPage()">
-                <span class="[ navigation__spanlink ]"><i class="[ fas fa-redo ][ navigation__link ]"></i></span>
-            </li>
             <li class="[ nav-item ][ navigation__item ]" onclick="exitGame()">
                 <span class="[ navigation__spanlink ]"><i class="[ fas fa-times ][ navigation__link ]"></i></span>
             </li>
@@ -48,9 +45,9 @@
 </nav>
 
 
-
+<div id="overlayBeforeLoad"></div>
 <div id="alert" class="[ container col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12 ][ char-selection__container ]">
-    <h2 class="[ heading heading--large ]">Select two players</h2>
+    <h2 class="[ heading heading--large char-selection__heading ]">Select two players</h2>
     <div class="[ row ][ page ]">
         <div class="[ col-xl-3 col-lg-3 col-md-12 col-sm-12 ][ char-selection__box ]">
             <div class="[ row ][ char-selection ]">

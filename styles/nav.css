@@ -21,18 +21,6 @@
   top: 0px;
   padding: 0;
 }
-@media screen and (max-width: 450px) {
-  .navigation__button {
-    /* right: 30px;
-    top: 0px; */
-  }
-}
-@media screen and (max-width: 400px) {
-  .navigation__button {
-    /* right: 60px;
-    top: 0px; */
-  }
-}
 .navigation__content {
   position: absolute;
   right: 0px;
@@ -43,13 +31,12 @@
 }
 @media screen and (max-width: 1367px) {
   .navigation__content {
-    width: 100px;
+    width: 80px;
   }
 }
 @media screen and (max-width: 400px) {
   .navigation__content {
     top: 80px;
-    /* width: 70px; */
   }
 }
 .navigation__toggler-icon {
@@ -62,13 +49,15 @@
 }
 @media screen and (max-width: 1367px) {
   .navigation__toggler-icon {
-    width: 100px;
+    width: 80px;
+    font-size: 1.8em;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 @media screen and (max-width: 450px) {
   .navigation__toggler-icon {
     font-size: 1.3em;
-    width: 80px;
     padding-top: 30px;
     padding-right: 30px;
   }
@@ -76,9 +65,9 @@
 @media screen and (max-width: 400px) {
   .navigation__toggler-icon {
     font-size: 1.3em;
-    width: 80px;
+    width: 50px;
     padding-top: 25px;
-    padding-right: 30px;
+    padding-right: 0px;
   }
 }
 .navigation__link {
@@ -91,6 +80,7 @@
 @media screen and (max-width: 1367px) {
   .navigation__link {
     margin-right: 12px;
+    font-size: 1.8em;
   }
 }
 @media screen and (max-width: 450px) {

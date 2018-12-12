@@ -8,7 +8,27 @@ body {
   position: relative;
   top: 30px;
 }
+@media screen and (max-width: 1440px) {
+  .winner {
+    margin-top: 4%;
+  }
+}
+@media screen and (max-width: 1367px) {
+  .winner {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 992px) {
+  .winner {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .winner {
+    margin-top: 23%;
+  }
+}
+@media screen and (max-width: 350px) {
   .winner {
     margin-top: 10%;
   }
@@ -17,23 +37,27 @@ body {
   opacity: 1;
   font-size: 2.1em;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__mainheading {
     font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .winner__mainheading {
+    padding-left: 0px;
   }
 }
 @media screen and (max-width: 400px) {
   .winner__mainheading {
     font-size: 1.3em;
-    padding-left: 0px;
   }
 }
 .winner__throne {
   width: 450px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__throne {
-    width: 350px;
+    width: 300px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -59,10 +83,10 @@ body {
 .winner__char--arya {
   height: 320px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--arya {
-    bottom: 250px;
-    height: 240px;
+    bottom: 200px;
+    height: 220px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -80,10 +104,10 @@ body {
 .winner__char--sansa {
   height: 360px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--sansa {
-    bottom: 250px;
-    height: 290px;
+    bottom: 200px;
+    height: 270px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -101,10 +125,10 @@ body {
 .winner__char--jon {
   height: 345px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--jon {
-    bottom: 250px;
-    height: 275px;
+    bottom: 200px;
+    height: 255px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -122,10 +146,10 @@ body {
 .winner__char--daenerys {
   height: 345px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--daenerys {
-    bottom: 250px;
-    height: 275px;
+    bottom: 200px;
+    height: 255px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -143,10 +167,10 @@ body {
 .winner__char--melisandre {
   height: 360px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--melisandre {
-    bottom: 250px;
-    height: 290px;
+    bottom: 200px;
+    height: 270px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -164,10 +188,10 @@ body {
 .winner__char--cersei {
   height: 360px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--cersei {
-    bottom: 250px;
-    height: 290px;
+    bottom: 200px;
+    height: 270px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -185,10 +209,10 @@ body {
 .winner__char--varys {
   height: 360px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--varys {
-    bottom: 250px;
-    height: 290px;
+    bottom: 200px;
+    height: 270px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -206,10 +230,10 @@ body {
 .winner__char--tyrion {
   height: 320px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--tyrion {
-    bottom: 250px;
-    height: 240px;
+    bottom: 200px;
+    height: 220px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -227,10 +251,10 @@ body {
 .winner__char--samwell {
   height: 355px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--samwell {
-    bottom: 250px;
-    height: 285px;
+    bottom: 200px;
+    height: 265px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -248,10 +272,10 @@ body {
 .winner__char--sandor {
   height: 400px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__char--sandor {
-    bottom: 250px;
-    height: 330px;
+    bottom: 200px;
+    height: 310px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -279,17 +303,16 @@ body {
     left: 17%;
   }
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__wolf {
-    width: 220px;
+    width: 210px;
     left: 20%;
-    top: 240px;
+    top: 190px;
   }
 }
 @media screen and (max-width: 1200px) {
   .winner__wolf {
     left: 10%;
-    top: 240px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -306,18 +329,16 @@ body {
   animation: shake-raven 8s;
   animation-iteration-count: infinite;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__raven {
     width: 70px;
     left: 62%;
-    top: 200px;
+    top: 140px;
   }
 }
 @media screen and (max-width: 1200px) {
   .winner__raven {
-    width: 70px;
     left: 70%;
-    top: 200px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -331,10 +352,10 @@ body {
   top: 330px;
   height: 230px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__pedestal {
     left: 62%;
-    top: 265px;
+    top: 205px;
     height: 170px;
   }
 }
@@ -357,10 +378,10 @@ body {
   width: 250px;
   margin-top: 40px;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .winner__button {
     width: 200px;
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 1.2em;
   }
 }
@@ -368,9 +389,9 @@ body {
 .share__container {
   margin: 15% 0 5%;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .share__container {
-    margin: 15% 0 7%;
+    margin: 12% 0 5%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -381,7 +402,7 @@ body {
 .share__readmore {
   margin-top: 4%;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .share__readmore {
     margin-top: 1%;
   }
@@ -425,7 +446,7 @@ body {
   font-size: 2.1em;
   padding-right: 0;
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .share__title {
     font-size: 1.9em;
   }
@@ -481,7 +502,7 @@ body {
     right: 5%;
   }
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   .share__button {
     right: 3%;
   }
@@ -515,7 +536,7 @@ input[type=text] {
     left: 5%;
   }
 }
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1440px) {
   input[type=text] {
     left: 3%;
   }
@@ -610,7 +631,6 @@ input[type=text] {
     transform: translate(0px, -1px);
   }
 }
-/* SCROLL DOWN ARROW */
 .arrow1 {
   float: right;
   position: absolute;

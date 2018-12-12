@@ -60,6 +60,19 @@ function displayCanvas(){
     document.getElementById('diceContainer').innerHTML += newCanvas;
 }
 
+function setTimeoutBtn(){
+    setTimeout(function(){
+        diceButton.style.display = "block";
+    }, 3000)
+} 
+
+function delayElement(element, displayType, delayTime) {
+    element.style.display = 'none';
+    setTimeout(function(){
+        element.style.display = displayType;
+    }, delayTime)
+}
+
 function relocateWinner(){
     setTimeout(function(){
         location.href = "winner.html";
@@ -129,36 +142,17 @@ function rollDice(){
             document.getElementById('slideInText').innerHTML = "";
         }
 
-
         //add traps to different numbers
         var diceButton = document.getElementById("rollDice");
         switch (tokenNr.number) {
         case 1:
-            diceButton.style.display = "none";
-            function delayButton1(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton1();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 2:
-            diceButton.style.display = "none";
-            function delayButton2(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton2();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 3:
-            diceButton.style.display = "none";
-            function delayButton3(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton3();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 4: //HORSE TRAP TILE
             diceButton.style.display = "none";
@@ -182,22 +176,10 @@ function rollDice(){
             delayButton4();
         break;
         case 5:
-            diceButton.style.display = "none";
-            function delayButton5(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton5();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 6:
-            diceButton.style.display = "none";
-            function delayButton6(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton6();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 7: //WOLFSWOOD
             diceButton.style.display = "none"; 
@@ -221,22 +203,10 @@ function rollDice(){
             delayButton7();   
         break;
         case 8:
-            diceButton.style.display = "none";
-            function delayButton8(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton8();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 9:
-            diceButton.style.display = "none";
-            function delayButton9(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton9();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 10: //RAVEN TRAP TILE
             diceButton.style.display = "none";
@@ -260,22 +230,10 @@ function rollDice(){
             delayButton3();
         break;
         case 11:
-            diceButton.style.display = "none";
-            function delayButton11(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton11();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 12:
-            diceButton.style.display = "none";
-            function delayButton12(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton12();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 13: //RANDOM BACK TRAP TILE
             diceButton.style.display = "none";
@@ -307,13 +265,7 @@ function rollDice(){
             delayButton4();
         break;
         case 14:
-            diceButton.style.display = "none";
-            function delayButton14(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton14();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 15: //GHOST TRAP TILE
             diceButton.style.display = "none";
@@ -337,67 +289,25 @@ function rollDice(){
             delayButton15();
         break;
         case 16:
-            diceButton.style.display = "none";
-            function delayButton16(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton16();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 17:
-            diceButton.style.display = "none";
-            function delayButton17(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton17();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 18:
-            diceButton.style.display = "none";
-            function delayButton18(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton18();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 19:
-            diceButton.style.display = "none";
-            function delayButton19(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton19();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 20:
-            diceButton.style.display = "none";
-            function delayButton20(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton20();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 21:
-            diceButton.style.display = "none";
-            function delayButton21(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton21();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 22:
-            diceButton.style.display = "none";
-            function delayButton22(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton22();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 23://WIDOWS WAIL TRAP TILE
             diceButton.style.display = "none";
@@ -422,13 +332,7 @@ function rollDice(){
             
         break;
         case 24:
-            diceButton.style.display = "none";
-            function delayButton24(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton24();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 25://ANGRY KNIGHTS TRAP TILE
             diceButton.style.display = "none";
@@ -453,31 +357,13 @@ function rollDice(){
             
         break;
         case 26:
-            diceButton.style.display = "none";
-            function delayButton26(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton26();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 27:
-            diceButton.style.display = "none";
-            function delayButton27(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton27();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 28:
-            diceButton.style.display = "none";
-            function delayButton28(){
-                setTimeout(function(){
-                    diceButton.style.display = "block";
-                }, 3000)
-            }
-            delayButton28();
+            delayElement(diceButton, 'block', 3000);
         break;
         case 29://DRAGON GOT YOU TRAP TILE
             diceButton.style.display = "none";

@@ -4,13 +4,12 @@
 
 
 .start{
-
     text-align: center;
     &__container{
         margin-top: 17%;
-        /* @media screen and (max-width: 1367px ) {
-            margin-top: 40%;
-        } */
+        @media screen and (max-width: 1367px ) {
+            margin-top: 15%;
+        }
         @media screen and (max-width: 992px ) {
             margin-top: 25%;
         }
@@ -38,8 +37,8 @@
     }
     &__mainheading{
         font-size: 2.1em;
-        @media screen and (max-width: 768px ) {
-            font-size: 1.9em;
+        @media screen and (max-width: 1367px ) {
+            font-size: 1.8em;
         }
         @media screen and (max-width: 650px ) {
             font-size: 1.5em;
@@ -60,14 +59,14 @@
         background-color: $black;
     }
     &__button{
-        padding: 15px;
-        width: 230px;
-        font-size: 1.3em;
-        letter-spacing: 3px;
-        font-family: $button;
-        @media screen and (max-width: 768px ) {
-            padding: 12px;
+        width: 250px;
+        margin-top: 40px;
+        @media screen and (max-width: 1440px ) {
             width: 200px;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        @media screen and (max-width: 768px ) {
             font-size: 1em;
         }
         @media screen and (max-width: 450px ) {
